@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 
 type Props = {
   links: { name: string; to: string; id: number }[];
+  height: number;
 };
 
-const Drawer = ({ links }: Props): JSX.Element => {
+const Drawer = ({ links, height }: Props): JSX.Element => {
   const variants = {
     open: {
       transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -18,7 +19,8 @@ const Drawer = ({ links }: Props): JSX.Element => {
   };
   return (
     <motion.div
-      className="fixed grow flex-col h-screen bg-white p-3 justify-center items-center "
+      style={{ height: `calc(100vh - ${height}px)` }}
+      className={` flex grow flex-col bg-white p-3 justify-center items-center `}
       initial={{ x: 360 }}
       animate={{ x: 0 }}
       exit={{ x: 700 }}
