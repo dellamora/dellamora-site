@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Instagram from "../../../common/svgs/instagramIcon";
 import GitHub from "../../../common/svgs/gitHub";
 import Twitter from "../../../common/svgs/twitterIcon";
