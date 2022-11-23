@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Instagram from "../../../common/svgs/instagramIcon";
 import GitHub from "../../../common/svgs/gitHub";
 import Twitter from "../../../common/svgs/twitterIcon";
@@ -26,42 +26,39 @@ const Drawer = ({ links, height, handleClose }: Props): JSX.Element => {
   return (
     <motion.div
       style={{ height: `calc(100vh - ${height}px)` }}
-      className={` flex grow flex-col bg-white p-3 justify-between items-center  `}
+      className={` flex grow flex-col  bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF] p-3 justify-between items-center  `}
       initial={{ x: 360 }}
       animate={{ x: 0 }}
       exit={{ x: 700 }}
       transition={{ duration: 0.4 }}
     >
       <div />
-      <motion.ul className="flex flex-col space-y-6  " variants={variants}>
-        <div className="flex flex-col  items-center space-y-8  ">
-          {links.map(({ name, to, id }) => (
-            <motion.div
-              key={id}
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-                transition: {
-                  delay: id * 0.2,
-                },
-              }}
-              transition={{
-                x: { stiffness: 1000 },
-              }}
-              whileHover={{ scale: 1.1 }}
-            >
-              <a
-                className="font-thin text-2xl "
-                href={to}
-                onClick={handleClose}
-              >
-                {name}
-              </a>
-            </motion.div>
-          ))}
-        </div>
+      <motion.ul
+        className="flex flex-col space-y-6 items-center"
+        variants={variants}
+      >
+        {links.map(({ name, to, id }) => (
+          <motion.li
+            key={id}
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+              transition: {
+                delay: id * 0.2,
+              },
+            }}
+            transition={{
+              x: { stiffness: 1000 },
+            }}
+            whileHover={{ scale: 1.1 }}
+          >
+            <a className="font-thin text-3xl " href={to} onClick={handleClose}>
+              {name}
+            </a>
+          </motion.li>
+        ))}
       </motion.ul>
       <footer>
         <div className=" flex justify-center items-center space-x-8 py-11">

@@ -20,17 +20,14 @@ src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;50
   
 
   ::-webkit-scrollbar {
-    height: 5px;
-    width: 5px;
-    background: #10111400;
-    z-index: 50;
+    display: none;
   }
   
-  ::-webkit-scrollbar-thumb {
-    background:  #26292e00;
-    border-radius: 1ex;
+
+
+  div, nav, footer, section {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms; 
   }
-  
-  ::-webkit-scrollbar-corner {
-    background: #22242800;
-  }
+

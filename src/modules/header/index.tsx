@@ -1,6 +1,5 @@
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
-import React, { useContext, useRef, useState } from "react";
-import { DarkModeContext } from "../../common/context/darkMode";
+import React, { useRef, useState } from "react";
 import { useDimensions } from "../../common/hooks/useDimensions";
 import MenuToggleIcon from "../../common/svgs/menuToggle";
 import DarkModeToggle from "./components/darkModeToggle";
@@ -11,8 +10,6 @@ const Header: React.FC = (): JSX.Element => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   const { scrollYProgress } = useScroll();
-
-  const { isDark, toggleDarkMode } = useContext(DarkModeContext);
 
   const links = [
     { name: "Portfolio", to: "#portfolio", id: 1 },
@@ -32,7 +29,7 @@ const Header: React.FC = (): JSX.Element => {
     <div className="fixed overflow-hidden z-20">
       <nav
         ref={containerRef}
-        className=" shrink-0 w-screen flex justify-between p-4 bg-white items-center"
+        className="shrink-0 w-screen flex justify-between p-4  items-center  bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF]"
       >
         <a href="/" className="font-Orya font-semibold text-3xl ">
           Dellamora.
@@ -40,9 +37,14 @@ const Header: React.FC = (): JSX.Element => {
         <motion.div
           initial={false}
           animate={isOpen ? "open" : "closed"}
-          className="lg:hidden space-x-5 z-10 bg-transparent "
+          className="lg:hidden space-x-5 z-10 bg-transparent flex "
         >
-          <MenuToggleIcon onClick={() => setIsOpen(current => !current)} />
+          <DarkModeToggle />
+
+          <MenuToggleIcon
+            className="dark:stroke-white"
+            onClick={() => setIsOpen(current => !current)}
+          />
         </motion.div>
         <div className="hidden gap-3 lg:relative lg:flex text-xl items-center ">
           {links.map(({ name, to, id }) => (
@@ -53,16 +55,17 @@ const Header: React.FC = (): JSX.Element => {
         </div>
 
         <div className=" hidden lg:flex lg:space-x-10 lg:items-center  ">
-          <DarkModeToggle toggleSwitch={toggleDarkMode} isDark={isDark} />
+          <DarkModeToggle />
           <button
             onClick={() => console.log("baixar pdf")}
             className="
-              bg-white 
-              hover:bg-gray-100 
+            dark:text-[#FBFAFF]
+            dark:border-[#FBFAFF]
+              hover:dark:bg-[#3b3b3b]/50
+            hover:bg-gray-100 
               font-semibold 
               py-[13px] px-[20px]
               border 
-             border-[#F1F1F1]
              text-[#232E35]
              font-Inter 
              rounded-lg"
@@ -81,7 +84,7 @@ const Header: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
       <motion.div
-        className=" absolute top-0 left-0 right-0 h-[3px] origin-[0%] bg-[#161616]"
+        className=" absolute top-0 left-0 right-0 h-[3px] origin-[0%] dark:bg-[#FBFAFF] bg-[#161616]"
         style={{ scaleX }}
       />
     </div>

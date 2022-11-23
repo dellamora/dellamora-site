@@ -27,7 +27,10 @@ export const Section = ({
     }
   }, [inView]);
   return (
-    <section className={`relative p-[65px] h-[90vh] ${bgColor}`} ref={ref}>
+    <section
+      className={`relative p-[65px] h-[90vh] bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF]`}
+      ref={ref}
+    >
       <div id={id} className="absolute pointer-events-none -top-[100px]"></div>
       {title && <h1>{title}</h1>}
       {subTitle && <h1>{subTitle}</h1>}

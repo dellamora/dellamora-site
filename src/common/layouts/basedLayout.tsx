@@ -6,7 +6,7 @@ const BaseLayout = ({
   children: React.ReactNode;
 }): JSX.Element => {
   return (
-    <div className="h-screen flex flex-col bg-white">
+    <div className="h-screen flex flex-col bg-[#FBFAFF] dark:bg-[#1E1E1E]">
       <Header />
       <div className="mt-[64px]">{children}</div>
     </div>

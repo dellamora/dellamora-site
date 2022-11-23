@@ -11,7 +11,7 @@ const Path = props => (
     {...props}
   />
 );
-const MenuToggleIcon: Icon = ({ onClick }): JSX.Element => {
+const MenuToggleIcon: Icon = ({ onClick, className }): JSX.Element => {
   return (
     <svg width="30" viewBox="0 0 23 19" onClick={onClick}>
       <Path
@@ -19,6 +19,7 @@ const MenuToggleIcon: Icon = ({ onClick }): JSX.Element => {
           closed: { d: "M 2 2.5 L 20 2.5" },
           open: { d: "M 3 16.5 L 17 2.5" },
         }}
+        className={className}
       />
       <Path
         d="M 2 9.423 L 20 9.423"
@@ -27,12 +28,14 @@ const MenuToggleIcon: Icon = ({ onClick }): JSX.Element => {
           open: { opacity: 0 },
         }}
         transition={{ duration: 0.1 }}
+        className={className}
       />
       <Path
         variants={{
           closed: { d: "M 2 16.346 L 20 16.346" },
           open: { d: "M 3 2.5 L 17 16.346" },
         }}
+        className={className}
       />
     </svg>
   );
