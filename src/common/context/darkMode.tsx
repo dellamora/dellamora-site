@@ -1,5 +1,5 @@
 import { time } from "console";
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 interface DarkModeContextInterface {
   isDark: boolean;
@@ -26,12 +26,22 @@ export const DarkModeContextProvider = ({
     clearTimeout(timeOut);
     if (!isBusy) {
       setIsBusy(true);
-      setIsDark(last => !last);
+      setIsDark(last => {
+        window.localStorage.setItem("theme", !last ? "dark" : "light");
+        return !last;
+      });
     }
     timeOut = setTimeout(() => {
       setIsBusy(false);
     }, 300);
   };
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+    const theme = window.localStorage.getItem("theme");
+    setIsDark(theme === "dark");
+  }, []);
 
   return (
     <DarkModeContext.Provider value={{ isDark, toggleDarkMode }}>
