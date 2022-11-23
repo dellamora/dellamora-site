@@ -8,6 +8,7 @@ type Props = {
   setIsInView?: (isInView: boolean) => void;
   title?: string;
   subTitle?: string;
+  className?: string;
 };
 
 export const Section = ({
@@ -17,6 +18,7 @@ export const Section = ({
   setIsInView,
   title,
   subTitle,
+  className,
 }: Props): JSX.Element => {
   const ctrls = useAnimation();
 
@@ -61,85 +63,89 @@ export const Section = ({
   }, [inView]);
   return (
     <section
-      className={`relative p-[65px] h-[90vh] bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF]`}
+      className={`relative overflow-x-hidden p-[65px] h-[90vh] bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF] ${className}`}
       ref={ref}
     >
-      <div id={id} className="absolute pointer-events-none -top-[100px]"></div>
-      <div>
-        <div className="flex md:items-center ">
-          <motion.div
-            initial="hidden"
-            animate={ctrls}
-            variants={characterAnimation}
-            transition={{
-              delay: 0.5,
-            }}
-            className=" hidden md:flex mr-3 h-0.5 w-4 bg-[#D9D9D9] justify-center"
-          />
-          {subTitle &&
-            subTitle.split(" ").map((word, index) => {
-              return (
-                <motion.span
-                  className=" font-Inter text-subTitle mr-2 text-[#656D72] uppercase text-bold "
-                  ref={ref}
-                  aria-hidden="true"
-                  key={index}
-                  initial="hidden"
-                  animate={ctrls}
-                  variants={wordAnimation}
-                  transition={{
-                    delayChildren: index * 0.25,
-                    staggerChildren: 0.05,
-                  }}
-                >
-                  {word.split("").map((character, index) => {
-                    return (
-                      <motion.span
-                        aria-hidden="true"
-                        key={index}
-                        variants={characterAnimation}
-                      >
-                        {character}
-                      </motion.span>
-                    );
-                  })}
-                </motion.span>
-              );
-            })}
+      <div id={id} className="absolute pointer-events-none -top-[100px]" />
+      {(title || subTitle) && (
+        <div>
+          {subTitle && (
+            <div className="flex md:items-center ">
+              <motion.div
+                initial="hidden"
+                animate={ctrls}
+                variants={characterAnimation}
+                transition={{
+                  delay: 0.5,
+                }}
+                className=" hidden md:flex mr-3 h-0.5 w-4 bg-[#D9D9D9] justify-center"
+              />
+              {subTitle.split(" ").map((word, index) => {
+                return (
+                  <motion.span
+                    className=" font-Inter text-subTitle mr-2 text-[#656D72] uppercase text-bold "
+                    ref={ref}
+                    aria-hidden="true"
+                    key={index}
+                    initial="hidden"
+                    animate={ctrls}
+                    variants={wordAnimation}
+                    transition={{
+                      delayChildren: index * 0.25,
+                      staggerChildren: 0.05,
+                    }}
+                  >
+                    {word.split("").map((character, index) => {
+                      return (
+                        <motion.span
+                          aria-hidden="true"
+                          key={index}
+                          variants={characterAnimation}
+                        >
+                          {character}
+                        </motion.span>
+                      );
+                    })}
+                  </motion.span>
+                );
+              })}
+            </div>
+          )}
+          {title && (
+            <div className="flex md:items-center">
+              {title.split(" ").map((word, index) => {
+                return (
+                  <motion.span
+                    className=" font-Frank text-title mr-2 dark:text-[#dbdbdb]  text-black uppercase text-bold "
+                    ref={ref}
+                    aria-hidden="true"
+                    key={index}
+                    initial="hidden"
+                    animate={ctrls}
+                    variants={wordAnimation}
+                    transition={{
+                      delayChildren: index * 0.25,
+                      staggerChildren: 0.05,
+                    }}
+                  >
+                    {word.split("").map((character, index) => {
+                      return (
+                        <motion.span
+                          aria-hidden="true"
+                          key={index}
+                          variants={characterAnimation}
+                        >
+                          {character}
+                        </motion.span>
+                      );
+                    })}
+                  </motion.span>
+                );
+              })}
+            </div>
+          )}
         </div>
-        <div className="flex md:items-center  ">
-          {title &&
-            title.split(" ").map((word, index) => {
-              return (
-                <motion.span
-                  className=" font-Frank text-title mr-2 dark:text-[#dbdbdb]  text-black uppercase text-bold "
-                  ref={ref}
-                  aria-hidden="true"
-                  key={index}
-                  initial="hidden"
-                  animate={ctrls}
-                  variants={wordAnimation}
-                  transition={{
-                    delayChildren: index * 0.25,
-                    staggerChildren: 0.05,
-                  }}
-                >
-                  {word.split("").map((character, index) => {
-                    return (
-                      <motion.span
-                        aria-hidden="true"
-                        key={index}
-                        variants={characterAnimation}
-                      >
-                        {character}
-                      </motion.span>
-                    );
-                  })}
-                </motion.span>
-              );
-            })}
-        </div>
-      </div>
+      )}
       {children}
     </section>
   );
