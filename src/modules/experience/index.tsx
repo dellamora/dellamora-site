@@ -7,7 +7,7 @@ import Section from "../../common/components/section";
 
 const Experience: React.FC = (): JSX.Element => {
   return (
-    <Section id="experience">
+    <Section id="experience" title="Work Experience" subTitle="career path">
       <div>
         <h1> Hello, AbssssssssssoutMe!</h1>
       </div>

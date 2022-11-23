@@ -13,7 +13,26 @@ module.exports = {
     "./src/modules/**/*.tsx",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        title: [
+          "2rem",
+          {
+            lineHeight: "36px",
+            fontWeight: "900",
+          },
+        ],
+
+        subTitle: [
+          "0.8rem",
+          {
+            letterSpacing: "7.5px",
+            lineHeight: "24px",
+            fontWeight: "500",
+          },
+        ],
+      },
+    },
     fontFamily: {
       Frank: ["Frank Ruhl Libre", "sans-serif"],
       Inter: ["Inter", "sans-serif"],
