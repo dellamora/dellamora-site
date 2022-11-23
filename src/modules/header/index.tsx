@@ -70,7 +70,7 @@ const Header: React.FC = (): JSX.Element => {
         {isOpen && <Drawer height={height} links={links} />}
       </AnimatePresence>
       <motion.div
-        className="top-0 absolute rounded md:top-auto  md:bottom-[0px] left-0 right-0 md:h-[2px] origin-[0%] dark:bg-[#161616] bg-primary"
+        className=" absolute top-0 left-0 right-0 h-[3px] origin-[0%] bg-[#161616]"
         style={{ scaleX }}
       />
     </div>
