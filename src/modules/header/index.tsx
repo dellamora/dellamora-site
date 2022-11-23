@@ -1,7 +1,9 @@
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
+import { DarkModeContext } from "../../common/context/darkMode";
 import { useDimensions } from "../../common/hooks/useDimensions";
 import MenuToggleIcon from "../../common/svgs/menuToggle";
+import DarkModeToggle from "./components/darkModeToggle";
 import Drawer from "./components/drawer";
 
 const Header: React.FC = (): JSX.Element => {
@@ -9,6 +11,8 @@ const Header: React.FC = (): JSX.Element => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   const { scrollYProgress } = useScroll();
+
+  const { isDark, toggleDarkMode } = useContext(DarkModeContext);
 
   const links = [
     { name: "Portfolio", to: "#portfolio", id: 1 },
@@ -48,7 +52,8 @@ const Header: React.FC = (): JSX.Element => {
           ))}
         </div>
 
-        <div className=" hidden lg:flex lg:space-x-3 lg:items-center  ">
+        <div className=" hidden lg:flex lg:space-x-10 lg:items-center  ">
+          <DarkModeToggle toggleSwitch={toggleDarkMode} isDark={isDark} />
           <button
             onClick={() => console.log("baixar pdf")}
             className="
