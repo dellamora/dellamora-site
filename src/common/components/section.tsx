@@ -6,6 +6,8 @@ type Props = {
   children: JSX.Element | JSX.Element[];
   bgColor?: `bg-${string}`;
   setIsInView?: (isInView: boolean) => void;
+  title?: string;
+  subTitle?: string;
 };
 
 export const Section = ({
@@ -13,6 +15,8 @@ export const Section = ({
   children,
   bgColor,
   setIsInView,
+  title,
+  subTitle,
 }: Props): JSX.Element => {
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -25,8 +29,8 @@ export const Section = ({
   return (
     <section className={`relative p-[65px] h-[90vh] ${bgColor}`} ref={ref}>
       <div id={id} className="absolute pointer-events-none -top-[100px]"></div>
-      <h1>Title</h1>
-      <h1>SubTitle</h1>
+      {title && <h1>{title}</h1>}
+      {subTitle && <h1>{subTitle}</h1>}
       {children}
     </section>
   );
