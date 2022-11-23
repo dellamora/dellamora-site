@@ -1,5 +1,5 @@
 import React from "react";
-
+import Header from "../../modules/header"
 const BaseLayout = ({
   children,
 }: {
@@ -7,7 +7,8 @@ const BaseLayout = ({
 }): JSX.Element => {
   
   return (
-    <div>      
+    <div>
+        <Header/>      
       {children}
     </div>
   );

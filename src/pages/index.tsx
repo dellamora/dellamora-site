@@ -1,6 +1,27 @@
-
 export default function Home() {
   return (
- <h1>hello </h1>
-  )
+    <div className="">
+      <h1>hello </h1>
+      <button>oi</button>
+      <br />
+      <button>oi</button>
+      <br />
+      <button>oi</button>
+      <br />
+      <button>oi</button>
+      <br />
+      <button>oi</button>
+      <br />
+      <button>oi</button>
+      <br />
+      <button
+        onClick={() => {
+          alert("oo");
+        }}
+      >
+        oi
+      </button>
+      <br />
+    </div>
+  );
 }
