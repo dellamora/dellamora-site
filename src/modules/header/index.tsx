@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import React, { useRef, useState } from "react";
 import { useDimensions } from "../../common/hooks/useDimensions";
 import MenuToggleIcon from "../../common/svgs/menuToggle";
@@ -8,6 +8,8 @@ const Header: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  const { scrollYProgress } = useScroll();
+
   const links = [
     { name: "Portfolio", to: "#portfolio", id: 1 },
     { name: "Experience", to: "#experience", id: 2 },
@@ -15,6 +17,12 @@ const Header: React.FC = (): JSX.Element => {
     { name: "About me", to: "#aboutme", id: 4 },
     { name: "Contact", to: "#contact", id: 5 },
   ];
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   return (
     <div className="fixed overflow-hidden">
@@ -61,6 +69,10 @@ const Header: React.FC = (): JSX.Element => {
       <AnimatePresence>
         {isOpen && <Drawer height={height} links={links} />}
       </AnimatePresence>
+      <motion.div
+        className="top-0 absolute rounded md:top-auto  md:bottom-[0px] left-0 right-0 md:h-[2px] origin-[0%] dark:bg-[#161616] bg-primary"
+        style={{ scaleX }}
+      />
     </div>
   );
 };
