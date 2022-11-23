@@ -25,7 +25,7 @@ const Header: React.FC = (): JSX.Element => {
   });
 
   return (
-    <div className="fixed overflow-hidden">
+    <div className="fixed overflow-hidden z-20">
       <nav
         ref={containerRef}
         className=" shrink-0 w-screen flex justify-between p-4 bg-white items-center"
@@ -67,7 +67,13 @@ const Header: React.FC = (): JSX.Element => {
         </div>
       </nav>
       <AnimatePresence>
-        {isOpen && <Drawer height={height} links={links} />}
+        {isOpen && (
+          <Drawer
+            handleClose={() => setIsOpen(current => !current)}
+            height={height}
+            links={links}
+          />
+        )}
       </AnimatePresence>
       <motion.div
         className=" absolute top-0 left-0 right-0 h-[3px] origin-[0%] bg-[#161616]"

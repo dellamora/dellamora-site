@@ -10,9 +10,10 @@ import SendMail from "../../../common/svgs/sendMail";
 type Props = {
   links: { name: string; to: string; id: number }[];
   height: number;
+  handleClose: () => void;
 };
 
-const Drawer = ({ links, height }: Props): JSX.Element => {
+const Drawer = ({ links, height, handleClose }: Props): JSX.Element => {
   const variants = {
     open: {
       transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -21,10 +22,11 @@ const Drawer = ({ links, height }: Props): JSX.Element => {
       transition: { staggerChildren: 0.05, staggerDirection: -1 },
     },
   };
+
   return (
     <motion.div
       style={{ height: `calc(100vh - ${height}px)` }}
-      className={` flex grow flex-col bg-white p-3 justify-between items-center `}
+      className={` flex grow flex-col bg-white p-3 justify-between items-center  `}
       initial={{ x: 360 }}
       animate={{ x: 0 }}
       exit={{ x: 700 }}
@@ -50,7 +52,11 @@ const Drawer = ({ links, height }: Props): JSX.Element => {
               }}
               whileHover={{ scale: 1.1 }}
             >
-              <a className="font-thin text-2xl " href={to}>
+              <a
+                className="font-thin text-2xl "
+                href={to}
+                onClick={handleClose}
+              >
                 {name}
               </a>
             </motion.div>

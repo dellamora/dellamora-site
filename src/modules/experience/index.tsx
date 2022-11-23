@@ -5,14 +5,14 @@ import Section from "../../common/components/section";
 
 /* import { Container } from "./styles"; */
 
-const Experiencie: React.FC = (): JSX.Element => {
+const Experience: React.FC = (): JSX.Element => {
   return (
-    <Section>
+    <Section id="experience">
       <div>
-        <h1> Hello, AboutMe!</h1>
+        <h1> Hello, AbssssssssssoutMe!</h1>
       </div>
     </Section>
   );
 };
 
-export default Experiencie;
+export default Experience;

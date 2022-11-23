@@ -7,9 +7,9 @@ import Section from "../../common/components/section";
 
 const Articles: React.FC = (): JSX.Element => {
   return (
-    <Section>
+    <Section id="articles">
       <div>
-        <h1> Hello, AboutMe!</h1>
+        <h1> Hellodd, Artiv;e!</h1>
       </div>
     </Section>
   );

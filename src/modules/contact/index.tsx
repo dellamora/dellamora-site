@@ -7,7 +7,7 @@ import Section from "../../common/components/section";
 
 const Contact: React.FC = (): JSX.Element => {
   return (
-    <Section>
+    <Section id="contact">
       <h1> Hello, Contact!</h1>
     </Section>
   );

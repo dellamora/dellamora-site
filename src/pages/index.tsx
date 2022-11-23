@@ -1,7 +1,7 @@
 import AboutMe from "../modules/aboutMe";
 import Articles from "../modules/articles";
 import Contact from "../modules/contact";
-import Experiencie from "../modules/experiencie";
+import Experience from "../modules/experience";
 import Footer from "../modules/footer";
 import Hero from "../modules/hero";
 import Portfolio from "../modules/portfolio";
@@ -11,7 +11,7 @@ export default function Home() {
     <div className="">
       <Hero />
       <Portfolio />
-      <Experiencie />
+      <Experience />
       <Articles />
       <AboutMe />
       <Contact />

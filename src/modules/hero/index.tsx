@@ -5,7 +5,7 @@ import Section from "../../common/components/section";
 
 const Hero: React.FC = (): JSX.Element => {
   return (
-    <Section>
+    <Section id="/">
       <div>
         <h1> Hello, AboutMe!</h1>
       </div>
