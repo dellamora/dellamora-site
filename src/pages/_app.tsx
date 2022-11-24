@@ -6,15 +6,19 @@ import {
   DarkModeContextProvider,
 } from "../common/context/darkMode";
 import { useContext } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   const { isDark } = useContext(DarkModeContext);
+  const queryClient = new QueryClient();
 
   return (
     <DarkModeContextProvider>
-      <BaseLayout>
-        <Component {...pageProps} />
-      </BaseLayout>
+      <QueryClientProvider client={queryClient}>
+        <BaseLayout>
+          <Component {...pageProps} />
+        </BaseLayout>
+      </QueryClientProvider>
     </DarkModeContextProvider>
   );
 }
