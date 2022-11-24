@@ -38,3 +38,22 @@ export interface User {
   profile_image: string;
   profile_image_90: string;
 }
+
+export interface JobsInfo {
+  company?: string;
+  address?: string;
+  period?: Period;
+  modality?: string;
+  technologies?: Technology[];
+  description?: string[];
+  role?: string;
+}
+
+export interface Period {
+  start?: string;
+  end?: string;
+}
+
+export interface Technology {
+  name?: string;
+}
