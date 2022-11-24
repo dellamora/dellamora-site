@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
-import { Icon } from "../../domain/components/icon";
+import { Icon } from "../../../domain/components/icon";
 
 const GitHub: Icon = ({ width, className }): JSX.Element => {
   return (

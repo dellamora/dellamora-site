@@ -3,10 +3,10 @@
 import React from "react";
 import Section from "../../common/components/section";
 import Cards from "./cards/Cards";
-import Instagram from "../../common/svgs/instagramIcon";
-import GitHub from "../../common/svgs/gitHub";
-import Twitter from "../../common/svgs/twitterIcon";
-import SendMail from "../../common/svgs/sendMail";
+import Instagram from "../../common/svgs/withAnimation/instagramIcon";
+import GitHub from "../../common/svgs/withAnimation/gitHub";
+import Twitter from "../../common/svgs/withAnimation/twitterIcon";
+import SendMail from "../../common/svgs/withAnimation/sendMail";
 import LinkedIn from "../../common/svgs/linkedinIcon";
 
 const Hero: React.FC = (): JSX.Element => {

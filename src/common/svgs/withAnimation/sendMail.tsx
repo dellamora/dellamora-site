@@ -1,4 +1,4 @@
-import { Icon } from "../../domain/components/icon";
+import { Icon } from "../../../domain/components/icon";
 import { motion } from "framer-motion";
 import React from "react";
 
