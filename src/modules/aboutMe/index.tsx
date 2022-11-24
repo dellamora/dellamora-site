@@ -46,7 +46,7 @@ const AboutMe: React.FC = (): JSX.Element => {
         >
           {skills.map(skills => (
             <>
-              <h1 className="font-Inter font-semibold  text-[#656D72] ] dark:text-[#dbdbdb]">
+              <h1 className="font-Inter font-semibold  text-[#404649] dark:text-[#fafafa] ">
                 {skills.name}
               </h1>
               <ProgressBar width="w-[60%]" />
