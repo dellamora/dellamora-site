@@ -6,6 +6,7 @@ import Instagram from "../../../common/svgs/withAnimation/instagramIcon";
 import GitHub from "../../../common/svgs/withAnimation/gitHub";
 import Twitter from "../../../common/svgs/withAnimation/twitterIcon";
 import SendMail from "../../../common/svgs/withAnimation/sendMail";
+import BuyMeACoffeee from "../../../common/svgs/withAnimation/buyMeACoffeeIcon";
 
 type Props = {
   links: { name: string; to: string; id: number }[];
@@ -62,10 +63,11 @@ const Drawer = ({ links, height, handleClose }: Props): JSX.Element => {
       </motion.ul>
       <footer>
         <div className=" flex justify-center items-center space-x-8 py-11">
-          <Instagram className="stroke-[#656D72]" width="20px" />
-          <GitHub className="stroke-[#656D72]" width="20px" />
+          <GitHub className="stroke-[#656D72]" width="19px" />
           <Twitter className="stroke-[#656D72]" width="22px" />
-          <SendMail className="stroke-[#656D72]" width="23px" />
+          <Instagram className="stroke-[#656D72]" width="19px" />
+          <BuyMeACoffeee className="stroke-[#656D72]" width="26px" />
+          <SendMail className="stroke-[#656D72]" width="24px" />
         </div>
         <div className="flex justify-center items-center pb-[88px]">
           <p className="font-Inter text-[#656D72]">© 2022 — @francidellamora</p>

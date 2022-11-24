@@ -7,7 +7,7 @@ import Instagram from "../../common/svgs/withAnimation/instagramIcon";
 import GitHub from "../../common/svgs/withAnimation/gitHub";
 import Twitter from "../../common/svgs/withAnimation/twitterIcon";
 import SendMail from "../../common/svgs/withAnimation/sendMail";
-import LinkedIn from "../../common/svgs/linkedinIcon";
+import BuyMeACoffeee from "../../common/svgs/withAnimation/buyMeACoffeeIcon";
 
 const Hero: React.FC = (): JSX.Element => {
   return (
@@ -19,10 +19,11 @@ const Hero: React.FC = (): JSX.Element => {
           Javascript and React. Passionate about UI/UX
         </p>
         <div className="flex justify-center lg:justify-start space-x-8 items-center py-11">
-          <Instagram className="stroke-[#656D72]" width="20px" />
           <GitHub className="stroke-[#656D72]" width="20px" />
           <Twitter className="stroke-[#656D72]" width="22px" />
-          <SendMail className="stroke-[#656D72]" width="23px" />
+          <Instagram className="stroke-[#656D72]" width="20px" />
+          <BuyMeACoffeee className="stroke-[#656D72]" width="26px" />
+          <SendMail className="stroke-[#656D72]" width="24px" />
         </div>
       </div>
       <Cards />

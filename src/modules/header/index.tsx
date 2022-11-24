@@ -1,4 +1,5 @@
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
+import Link from "next/link";
 import React, { useRef, useState } from "react";
 import { useDimensions } from "../../common/hooks/useDimensions";
 import MenuToggleIcon from "../../common/svgs/menuToggle";
@@ -56,8 +57,8 @@ const Header: React.FC = (): JSX.Element => {
 
         <div className=" hidden lg:flex lg:space-x-10 lg:items-center  ">
           <DarkModeToggle />
-          <button
-            onClick={() => console.log("baixar pdf")}
+          <Link
+            href={"https://www.linkedin.com/in/francielle-dellamora-3579301a1/"}
             className="
             dark:text-[#FBFAFF]
             dark:border-[#FBFAFF]
@@ -70,8 +71,8 @@ const Header: React.FC = (): JSX.Element => {
              font-Inter 
              rounded-lg"
           >
-            Resume
-          </button>
+            LinkedIn
+          </Link>
         </div>
       </nav>
       <AnimatePresence>
