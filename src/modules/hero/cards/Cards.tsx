@@ -17,11 +17,7 @@ const Cards: React.FC = (): JSX.Element => {
       />
       <img
         src="/mePc.jpg"
-        className="
-        
-          hidden lg:block lg:absolute
-          rounded-[16px] w-[21rem] h-[25rem]
-          "
+        className="hidden lg:block lg:absolute rounded-[16px] w-[21rem] h-[25rem]"
       />
     </div>
   );
