@@ -12,7 +12,7 @@ type Props = {
 };
 const ArticleCard = ({ article }: Props): JSX.Element => {
   return (
-    <div className="bg-white shadow-md  rounded-lg max-w-sm overflow-hidden dark:bg-[#131313] ">
+    <div className="bg-white border border-[#ceccceaa]  rounded-lg max-w-sm overflow-hidden dark:bg-[#131313] ">
       <div className="relative aspect-video w-auto ">
         <Image
           className="object-cover"
