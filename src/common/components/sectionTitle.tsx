@@ -13,6 +13,7 @@ const SectionTitle = ({
   title,
   subTitle,
   triggerAnimation,
+  className,
 }: Props): JSX.Element => {
   const wordAnimation = {
     hidden: {},
@@ -37,7 +38,7 @@ const SectionTitle = ({
     return null;
   }
   return (
-    <div>
+    <div className={className}>
       {subTitle && (
         <div className="flex md:items-center ">
           <motion.div
