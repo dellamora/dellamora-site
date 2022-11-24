@@ -14,6 +14,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        cards: "repeat(auto-fit, minmax(300px, 1fr))",
+      },
       fontSize: {
         title: [
           "2rem",
