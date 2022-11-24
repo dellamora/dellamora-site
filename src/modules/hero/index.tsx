@@ -18,7 +18,7 @@ const Hero: React.FC = (): JSX.Element => {
   });
   return (
     <div ref={ref} className="w-full flex justify-center">
-      <Section id="/" className=" flex flex-col justify-center ">
+      <Section id="/" className=" flex flex-col justify-center h-[80vh]">
         <div className="flex xl:gap-80 lg:gap-20 items-center">
           <div>
             <SectionTitle

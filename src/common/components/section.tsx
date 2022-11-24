@@ -32,7 +32,7 @@ export const Section = ({
   }, [inView]);
   return (
     <section
-      className={`relative overflow-x-hidden lg:p-[65px] p-5 h-[90vh] bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF] ${className}`}
+      className={`relative overflow-hidden lg:p-[65px] p-5  bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF] ${className}`}
       ref={ref}
     >
       <div id={id} className="absolute pointer-events-none -top-[100px]" />
