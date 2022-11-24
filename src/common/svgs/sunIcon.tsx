@@ -3,6 +3,7 @@ import { Icon } from "../../domain/components/icon";
 const SunIcon: Icon = (props): JSX.Element => {
   props.className;
   props.width;
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

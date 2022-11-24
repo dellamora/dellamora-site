@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import React, { useContext } from "react";
 import internal from "stream";
 import { DarkModeContext } from "../../../common/context/darkMode";
+import MoonIcon from "../../../common/svgs/moonIcon";
+import SunIcon from "../../../common/svgs/sunIcon";
 
 const DarkModeToggle = (): JSX.Element => {
   const { isDark, toggleDarkMode } = useContext(DarkModeContext);
@@ -19,7 +21,10 @@ const DarkModeToggle = (): JSX.Element => {
       className="relative w-[65px] h-[35px] bg-[#1E1E1E] dark:bg-[#FBFAFF] items-center rounded-full cursor-pointer flex"
       onClick={toggleDarkMode}
     >
-      <h1 className="absolute  left-2">oi</h1>
+      <SunIcon
+        width="22px"
+        className="absolute left-2 stroke-[#FBFAFF] dark:stroke-[#1E1E1E]"
+      />
       <motion.div
         className="absolute aspect-square h-full bg-[#FBFAFF] dark:bg-[#1E1E1E] scale-75 rounded-full "
         initial="light"
@@ -31,7 +36,10 @@ const DarkModeToggle = (): JSX.Element => {
         layout
         transition={spring}
       />
-      <h1 className="absolute right-2">t</h1>
+      <MoonIcon
+        width="18px"
+        className="absolute right-2 fill-[#FBFAFF] dark:fill-[#1E1E1E]"
+      />
     </div>
   );
 };
