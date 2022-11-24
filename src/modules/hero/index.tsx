@@ -7,6 +7,10 @@ import Instagram from "../../common/svgs/withAnimation/instagramIcon";
 import GitHub from "../../common/svgs/withAnimation/gitHub";
 import Twitter from "../../common/svgs/withAnimation/twitterIcon";
 import SendMail from "../../common/svgs/withAnimation/sendMail";
+<<<<<<< HEAD
+=======
+import LinkedIn from "../../common/svgs/linkedinIcon";
+>>>>>>> e8ee50e6db07930504936c00291c52eb03838303
 import BuyMeACoffeee from "../../common/svgs/withAnimation/buyMeACoffeeIcon";
 
 const Hero: React.FC = (): JSX.Element => {
