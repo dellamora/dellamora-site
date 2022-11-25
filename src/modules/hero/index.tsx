@@ -6,7 +6,6 @@ import Cards from "./cards/Cards";
 import Instagram from "../../common/svgs/withAnimation/instagramIcon";
 import GitHub from "../../common/svgs/withAnimation/gitHub";
 import Twitter from "../../common/svgs/withAnimation/twitterIcon";
-import SendMail from "../../common/svgs/withAnimation/sendMail";
 import BuyMeACoffeee from "../../common/svgs/withAnimation/buyMeACoffeeIcon";
 import SectionTitle from "../../common/components/sectionTitle";
 import { useInView } from "react-intersection-observer";
