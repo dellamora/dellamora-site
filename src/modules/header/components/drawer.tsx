@@ -27,7 +27,7 @@ const Drawer = ({ links, height, handleClose }: Props): JSX.Element => {
   return (
     <motion.div
       style={{ height: `calc(100vh - ${height}px)` }}
-      className={` flex grow flex-col  bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF] p-3 justify-between items-center  `}
+      className={` flex grow flex-col  bg-primary text-gray dark:bg-primaryDark dark:text-[#FBFAFF] p-3 justify-between items-center  `}
       initial={{ x: 360 }}
       animate={{ x: 0 }}
       exit={{ x: 700 }}
@@ -63,13 +63,15 @@ const Drawer = ({ links, height, handleClose }: Props): JSX.Element => {
       </motion.ul>
       <footer>
         <div className=" flex justify-center items-center space-x-8 py-11">
-          <GitHub className="stroke-[#656D72]" width="19px" />
-          <Twitter className="stroke-[#656D72]" width="22px" />
-          <Instagram className="stroke-[#656D72]" width="19px" />
-          <BuyMeACoffeee className="stroke-[#656D72]" width="26px" />
+          <GitHub className="stroke-grayMedium" width="19px" />
+          <Twitter className="stroke-grayMedium" width="22px" />
+          <Instagram className="stroke-grayMedium" width="19px" />
+          <BuyMeACoffeee className="stroke-grayMedium" width="26px" />
         </div>
         <div className="flex justify-center items-center pb-[88px]">
-          <p className="font-Inter text-[#656D72]">© 2022 — @francidellamora</p>
+          <p className="font-Inter text-grayMedium">
+            © 2022 — @francidellamora
+          </p>
         </div>
       </footer>
     </motion.div>

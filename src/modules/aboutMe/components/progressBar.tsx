@@ -19,7 +19,7 @@ const ProgressBar = ({ width }: Props): JSX.Element => {
         variants={variants}
       >
         <motion.div
-          className={`h-full rounded ${width} mb-10 bg-[#131313] dark:bg-[#FBFAFF] origin-[0%]`}
+          className={`h-full rounded ${width} mb-10 bg-redLight  origin-[0%]`}
           transition={{ delay: 0.4, duration: 1, type: "spring", bounce: 0.25 }}
           variants={variants}
         />

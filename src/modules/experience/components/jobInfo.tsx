@@ -20,19 +20,20 @@ type Props = {
 const JonInfo = ({ experiences }: Props): JSX.Element => {
   return (
     <div className="flex flex-col gap-3">
-      <h1 className="font-Inter text-xl font-semibold ">{experiences.role}</h1>
-      <h1 className="font-Inter text-[#656D72]">
-        {experiences.company} · {experiences.address} <br />
+      <h1 className="font-Inter text-xl font-semibold text-gray">
+        {experiences.role}
+      </h1>
+      <h1 className="font-Inter text-grayMedium">{experiences.address} </h1>
+      <h1 className="font-Inter text-sm font-semibold text-grayMedium">
         {experiences.period.start} - {experiences.period.end} ·
         {experiences.modality}
       </h1>
-
       <TechItem experiences={experiences} key={"jobInfo"} />
-      <hr />
+      <hr className="text-grayLight" />
       {experiences.description.map((description, i) => (
         <div key={i} className="flex  ">
-          <div className=" mr-3 h-0.5 w-4 shrink-0 bg-[#D9D9D9] mt-3" />
-          <span className="Inter text-[#656D72]  ">{description}</span>
+          <div className=" mr-3 h-0.5 w-4 shrink-0 bg-grayLight  mt-3" />
+          <span className="Inter text-grayMedium  ">{description}</span>
         </div>
       ))}
     </div>

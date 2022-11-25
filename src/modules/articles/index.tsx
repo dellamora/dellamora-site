@@ -27,7 +27,7 @@ const Articles = (): JSX.Element => {
   return (
     <Section
       id="articles"
-      className="flex flex-col gap-10 justify-center md:items-center"
+      className="flex flex-col gap-10 justify-center md:items-center bg-primary dark:bg-primaryDark"
       setIsInView={isInView => {
         setInview(current => isInView || current);
       }}

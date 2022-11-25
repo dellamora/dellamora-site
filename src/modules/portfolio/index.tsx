@@ -7,8 +7,13 @@ import Section from "../../common/components/section";
 
 const Portfolio: React.FC = (): JSX.Element => {
   return (
-    <Section id="portfolio" title="My Projects" subTitle="Featured Portifolios">
-      <div className="h-10 w-10 bg-red-800 dark:bg-black">
+    <Section
+      id="portfolio"
+      title="My Projects"
+      subTitle="Featured Portifolios "
+      className="bg-primaryLight dark:bg-primaryDark"
+    >
+      <div className="h-10 w-10 bg-red-800 bg-primaryLight dark:bg-primaryDark">
         {/* <div className="w-full grid grid-cols-cards gap-5">
         {data.map(article => {
           return <ArticleCard article={article} key={article.id} />;

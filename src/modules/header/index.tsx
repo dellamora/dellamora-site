@@ -30,10 +30,10 @@ const Header: React.FC = (): JSX.Element => {
     <div className="fixed overflow-hidden z-40">
       <nav
         ref={containerRef}
-        className="shrink-0 w-screen flex justify-between p-4  items-center  bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF]"
+        className="shrink-0 w-screen flex justify-between p-4  text-gray items-center  bg-primary dark:bg-primaryDark dark:text-[#FCFCFC] "
       >
-        <a href="/" className="font-Orya font-semibold text-3xl ">
-          Dellamora.
+        <a href="/" className="uppercase font-Inter font-extrabold text-lg  ">
+          Dellamora
         </a>
         <motion.div
           initial={false}
@@ -49,7 +49,7 @@ const Header: React.FC = (): JSX.Element => {
         </motion.div>
         <div className="hidden gap-3 lg:relative lg:flex text-xl items-center ">
           {links.map(({ name, to, id }) => (
-            <a className="pl-0 px-2 font-Orya font-thin " key={id} href={to}>
+            <a className="pl-0 px-2 font-Inter font-thin " key={id} href={to}>
               {name}
             </a>
           ))}
@@ -60,6 +60,7 @@ const Header: React.FC = (): JSX.Element => {
           <ButtonOutline
             isLink
             href="https://www.linkedin.com/in/francielle-dellamora-3579301a1/"
+            className="text-gray "
           >
             LinkedIn
           </ButtonOutline>
@@ -75,7 +76,7 @@ const Header: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
       <motion.div
-        className=" absolute top-0 left-0 right-0 h-[3px] origin-[0%] dark:bg-[#FBFAFF] bg-[#161616]"
+        className=" absolute top-0 left-0 right-0 h-[3px] origin-[0%] dark:bg-primary bg-primaryDark"
         style={{ scaleX }}
       />
     </div>

@@ -22,7 +22,7 @@ const AboutMe: React.FC = (): JSX.Element => {
       setIsInView={isInView => {
         setInview(current => isInView || current);
       }}
-      className="flex flex-col gap-10 md:items-center "
+      className="flex flex-col gap-10 md:items-center bg-primary dark:bg-primaryDark"
     >
       <SectionTitle
         title="About me & Skills"

@@ -8,8 +8,7 @@ const Cards: React.FC = (): JSX.Element => {
         animate={{ rotate: -6 }}
         transition={{ duration: 2, delay: 0.75 }}
         className="
-        bg-[#1E1E1E]
-        lg:dark:bg-[#131313]
+        bg-redLight
           lg:w-[21rem] 
           lg:rounded-[16px] 
           lg:h-[25rem] 

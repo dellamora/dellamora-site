@@ -18,15 +18,15 @@ const DarkModeToggle = (): JSX.Element => {
   };
   return (
     <div
-      className="relative w-[65px] h-[35px] bg-[#1E1E1E] dark:bg-[#FBFAFF] items-center rounded-full cursor-pointer flex"
+      className="relative w-[65px] h-[35px] bg-primaryDark dark:bg-[#FBFAFF] items-center rounded-full cursor-pointer flex"
       onClick={toggleDarkMode}
     >
       <SunIcon
         width="22px"
-        className="absolute left-2 stroke-[#FBFAFF] dark:stroke-[#1E1E1E]"
+        className="absolute left-2 stroke-[#FBFAFF] dark:stroke-primaryDark"
       />
       <motion.div
-        className="absolute aspect-square h-full bg-[#FBFAFF] dark:bg-[#1E1E1E] scale-75 rounded-full "
+        className="absolute aspect-square h-full bg-[#FBFAFF] dark:bg-primaryDark scale-75 rounded-full "
         initial="light"
         variants={{
           light: { right: "auto", left: 0 },
@@ -38,7 +38,7 @@ const DarkModeToggle = (): JSX.Element => {
       />
       <MoonIcon
         width="18px"
-        className="absolute right-2 fill-[#FBFAFF] dark:fill-[#1E1E1E]"
+        className="absolute right-2 fill-[#FBFAFF] dark:fill-primaryDark"
       />
     </div>
   );

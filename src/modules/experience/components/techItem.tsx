@@ -17,7 +17,6 @@ const TechItem = ({ experiences }: Props): JSX.Element => {
         .slice(0, isOpen ? experiences.technologies.length : 3)
         .map((technologies, index) => (
           <motion.div
-            // variants={variants}
             initial={{
               opacity: 0,
             }}
@@ -32,16 +31,11 @@ const TechItem = ({ experiences }: Props): JSX.Element => {
             }}
             whileHover={{ scale: 1.1 }}
             className="
-          w-fit
-          h-fit
-          px-1 py-1
-          bg-white 
-          
-          border 
-        border-[#F1F1F1]
-          rounded
-        text-[#656D72]
-         m-1  font-Inter font-semibold "
+              w-fit
+              h-fit
+              px-1 py-1 m-1
+              border border-grayLight rounded
+            text-grayMedium font-Inter font-medium font-sm"
           >
             {technologies.name}
           </motion.div>
@@ -65,12 +59,9 @@ const TechItem = ({ experiences }: Props): JSX.Element => {
           className="
           w-fit
           h-fit
-          px-3 py-1
-          bg-primary 
-          hover:bg-gray-100 
-          border 
-          rounded
-          m-1 font-Inter text-gray-500 font-semibold"
+          px-1 py-1 m-1
+          border border-redLight rounded 
+        text-redLight font-Inter font-medium font-sm"
         >
           Learn more
         </motion.button>

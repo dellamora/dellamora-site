@@ -73,7 +73,7 @@ const Experience = (): JSX.Element => {
   return (
     <Section
       id="experience"
-      className="flex flex-col gap-10 "
+      className="flex flex-col gap-10 bg-primaryLight dark:bg-primaryDark "
       setIsInView={state => {
         setInView(state);
       }}
