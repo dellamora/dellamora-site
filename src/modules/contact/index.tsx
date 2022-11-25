@@ -6,16 +6,26 @@ import Section from "../../common/components/section";
 
 const Contact = (): JSX.Element => {
   return (
-    <Section id="contact" className="p-4">
-      <h1> Lets create something together</h1>
-      <p className="w-80">
+    <Section id="contact" className="  0 flex flex-col gap-10">
+      <div>
+        <h1 className="font-Inter text-4xl">
+          Let&apos;s create something together!
+        </h1>
+      </div>
+      <p className="font-Inter">
         I’m interested in freelance opportunities – especially ambitious or
         large projects. However, if you have other request or question, don’t
-        hesitate to use the form.
+        hesitate to send me a mail.
       </p>
-      <ButtonOutline href="mailto:francielle@dellamora.dev" isLink={false}>
-        Send Mail
-      </ButtonOutline>
+      <div className="flex items-center justify-between">
+        <ButtonOutline
+          href="mailto:francielle@dellamora.dev"
+          isLink={false}
+          className="rounded-none"
+        >
+          Send Mail
+        </ButtonOutline>
+      </div>
     </Section>
   );
 };
