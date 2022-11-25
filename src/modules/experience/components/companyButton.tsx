@@ -11,7 +11,7 @@ type Props = {
   onClick: () => void;
   active: boolean;
 };
-
+// ss
 const CompanyButton = ({
   experiences,
   onClick,
@@ -27,7 +27,6 @@ const CompanyButton = ({
       >
         {experiences.company}
       </button>
-
       {active && (
         <motion.div
           className=" rounded absolute top-0 bottom-0 left-0 right-0 bg-[#e2e2e2] z-10 flex justify-end"
