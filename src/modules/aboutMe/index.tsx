@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Section from "../../common/components/section";
 import ProgressBar from "./components/progressBar";
+import SectionTitle from "../../common/components/sectionTitle";
 
 const AboutMe: React.FC = (): JSX.Element => {
   const [inView, setInview] = useState(false);
@@ -18,14 +19,17 @@ const AboutMe: React.FC = (): JSX.Element => {
   return (
     <Section
       id="aboutme"
-      title="About me & Skills"
-      subTitle="Learning path"
       setIsInView={isInView => {
         setInview(current => isInView || current);
       }}
-      className="flex flex-col gap-6  "
+      className="flex flex-col gap-10 md:items-center "
     >
-      <div className="flex flex-col md:flex-row gap-6  justify-center items-center ">
+      <SectionTitle
+        title="About me & Skills"
+        subTitle="Learning path"
+        triggerAnimation={inView}
+      />
+      <div className="flex flex-col md:flex-row gap-6  justify-center items-start ">
         <div className="md:w-1/2">
           <p className="font-Inter text-[#656D72]">
             Im a Full-Stack developer with a passion for creating amazing code

@@ -14,8 +14,8 @@ const Header: React.FC = (): JSX.Element => {
 
   const links = [
     { name: "Portfolio", to: "#portfolio", id: 1 },
-    { name: "Experience", to: "#experience", id: 2 },
-    { name: "Articles", to: "#articles", id: 3 },
+    { name: "Articles", to: "#articles", id: 2 },
+    { name: "Experience", to: "#experience", id: 3 },
     { name: "About me", to: "#aboutme", id: 4 },
     { name: "Contact", to: "#contact", id: 5 },
   ];

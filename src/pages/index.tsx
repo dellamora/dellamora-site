@@ -11,8 +11,8 @@ export default function Home() {
     <div className="">
       <Hero />
       <Portfolio />
-      <Experience />
       <Articles />
+      <Experience />
       <AboutMe />
       <Contact />
       <Footer />

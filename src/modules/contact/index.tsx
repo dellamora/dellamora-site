@@ -6,7 +6,7 @@ import Section from "../../common/components/section";
 
 const Contact = (): JSX.Element => {
   return (
-    <Section id="contact" className="  0 flex flex-col gap-10">
+    <Section id="contact" className="flex flex-col gap-10">
       <div>
         <h1 className="font-Inter text-4xl">
           Let&apos;s create something together!
@@ -17,7 +17,7 @@ const Contact = (): JSX.Element => {
         large projects. However, if you have other request or question, don’t
         hesitate to send me a mail.
       </p>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center">
         <ButtonOutline
           href="mailto:francielle@dellamora.dev"
           isLink={false}

@@ -10,8 +10,10 @@ import { FreeMode, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import SectionTitle from "../../common/components/sectionTitle";
 
 const Articles = (): JSX.Element => {
+  const [inView, setInview] = useState(false);
   const { isLoading, error, data } = useQuery<ArticlesDevTo[]>({
     queryKey: ["devToData"],
     queryFn: () =>
@@ -25,11 +27,17 @@ const Articles = (): JSX.Element => {
   return (
     <Section
       id="articles"
-      title="Personal Blog"
-      subTitle="My articles"
-      className="flex flex-col gap-10 justify-center"
+      className="flex flex-col gap-10 justify-center md:items-center"
+      setIsInView={isInView => {
+        setInview(current => isInView || current);
+      }}
     >
-      <div className="w-full ">
+      <SectionTitle
+        title="Personal Blog"
+        subTitle="My articles"
+        triggerAnimation={inView}
+      />
+      <div className="flex md:items-center">
         <Swiper
           breakpoints={{
             640: {
