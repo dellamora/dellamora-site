@@ -27,7 +27,7 @@ const Header: React.FC = (): JSX.Element => {
   });
 
   return (
-    <div className="fixed overflow-hidden z-20">
+    <div className="fixed overflow-hidden z-40">
       <nav
         ref={containerRef}
         className="shrink-0 w-screen flex justify-between p-4  items-center  bg-[#FBFAFF] dark:bg-[#1E1E1E] dark:text-[#FBFAFF]"

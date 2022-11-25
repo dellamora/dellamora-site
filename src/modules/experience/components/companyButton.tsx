@@ -19,7 +19,7 @@ const CompanyButton = ({
   return (
     <div className="relative w-full">
       <button
-        className={`w-full flex relative font-Inter items-center text-xl text-left  py-2 md:px-6 px-4 z-50 ${
+        className={`w-full flex relative font-Inter items-center text-xl text-left  py-2 md:px-6 px-4 z-20 ${
           active ? "text-red-900" : "text-gray-900"
         }  `}
         onClick={onClick}
