@@ -36,7 +36,6 @@ const Hero: React.FC = (): JSX.Element => {
               <Twitter className="stroke-[#656D72]" width="22px" />
               <Instagram className="stroke-[#656D72]" width="20px" />
               <BuyMeACoffeee className="stroke-[#656D72]" width="26px" />
-              <SendMail className="stroke-[#656D72]" width="24px" />
             </div>
           </div>
           <Cards />
