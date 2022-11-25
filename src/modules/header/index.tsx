@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
-import Link from "next/link";
 import React, { useRef, useState } from "react";
+import ButtonOutline from "../../common/components/buttonOutline";
 import { useDimensions } from "../../common/hooks/useDimensions";
 import MenuToggleIcon from "../../common/svgs/menuToggle";
 import DarkModeToggle from "./components/darkModeToggle";
@@ -57,22 +57,12 @@ const Header: React.FC = (): JSX.Element => {
 
         <div className=" hidden lg:flex lg:space-x-10 lg:items-center  ">
           <DarkModeToggle />
-          <Link
-            href={"https://www.linkedin.com/in/francielle-dellamora-3579301a1/"}
-            className="
-            dark:text-[#FBFAFF]
-            dark:border-[#FBFAFF]
-              hover:dark:bg-[#3b3b3b]/50
-            hover:bg-gray-100 
-              font-semibold 
-              py-[13px] px-[20px]
-              border 
-             text-[#232E35]
-             font-Inter 
-             rounded-lg"
+          <ButtonOutline
+            isLink
+            href="https://www.linkedin.com/in/francielle-dellamora-3579301a1/"
           >
             LinkedIn
-          </Link>
+          </ButtonOutline>
         </div>
       </nav>
       <AnimatePresence>
