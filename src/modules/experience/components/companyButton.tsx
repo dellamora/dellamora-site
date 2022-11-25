@@ -11,7 +11,6 @@ type Props = {
   onClick: () => void;
   active: boolean;
 };
-// ss
 const CompanyButton = ({
   experiences,
   onClick,
