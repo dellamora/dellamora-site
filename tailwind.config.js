@@ -22,6 +22,7 @@ module.exports = {
       gray: "#232E35",
       grayMedium: "#656D72",
       grayLight: "#D9D9D9",
+      whiteBasic: " #F5F3FE",
     },
     extend: {
       gridTemplateColumns: {

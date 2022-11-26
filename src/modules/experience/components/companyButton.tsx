@@ -27,7 +27,7 @@ const CompanyButton = ({
       </button>
       {active && (
         <motion.div
-          className=" rounded absolute top-0 bottom-0 left-0 right-0 bg-primary dark:bg-[#242424aa] z-10 flex justify-end"
+          className=" rounded absolute top-0 bottom-0 left-0 right-0 bg-whiteBasic dark:bg-[#242424aa] z-10 flex justify-end"
           layoutId="companyBg"
         >
           <ChevronRight

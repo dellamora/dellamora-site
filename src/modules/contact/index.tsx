@@ -10,12 +10,11 @@ const Contact = (): JSX.Element => {
       id="contact"
       className="min-h-[40vh] flex flex-col gap-10 bg-primaryLight dark:bg-primaryDark"
     >
-      <div>
-        <h1 className="font-Inter text-4xl">
-          Let&apos;s create something together!
-        </h1>
+      <div className="flex font-Inter font-bold text-4xl gap-3">
+        <h1 className=" text-gray ">Let&apos;s create something </h1>
+        <h1 className="text-redLight  ">together!</h1>
       </div>
-      <p className="font-Inter">
+      <p className="font-Inter text-grayMedium ">
         I’m interested in freelance opportunities – especially ambitious or
         large projects. However, if you have other request or question, don’t
         hesitate to send me a mail.
