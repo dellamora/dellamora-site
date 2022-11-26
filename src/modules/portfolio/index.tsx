@@ -2,8 +2,7 @@
 
 import React from "react";
 import Section from "../../common/components/section";
-
-/* import { Container } from "./styles"; */
+import CardProject from "./components/card";
 
 const Portfolio: React.FC = (): JSX.Element => {
   return (
@@ -11,14 +10,13 @@ const Portfolio: React.FC = (): JSX.Element => {
       id="portfolio"
       title="My Projects"
       subTitle="Featured Portifolios "
-      className="bg-primaryLight dark:bg-primaryDark"
+      className="bg-primaryLight dark:bg-primaryDark flex flex-col gap-10"
     >
-      <div className="h-10 w-10 bg-red-800 bg-primaryLight dark:bg-primaryDark">
-        {/* <div className="w-full grid grid-cols-cards gap-5">
-        {data.map(article => {
-          return <ArticleCard article={article} key={article.id} />;
-        })}
-      </div> */}
+      <div className="grid grid-cols-cards gap-10">
+        <CardProject />
+        <CardProject />
+        <CardProject />
+        <CardProject />
       </div>
     </Section>
   );
