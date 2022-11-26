@@ -48,12 +48,12 @@ const SectionTitle = ({
             transition={{
               delay: 0.5,
             }}
-            className="hidden md:flex mr-3 h-0.5 w-4 bg-grayLight "
+            className="hidden md:flex mr-3 h-0.5 w-4 bg-grayLight  "
           />
           {subTitle.split(" ").map((word, index) => {
             return (
               <motion.span
-                className=" font-Inter text-subTitle mr-2 text-grayMedium uppercase text-bold "
+                className=" font-Inter text-subTitle mr-2 text-grayMedium  uppercase text-bold "
                 aria-hidden="true"
                 key={index}
                 initial="hidden"
@@ -88,7 +88,7 @@ const SectionTitle = ({
         {title.split(" ").map((word, index) => {
           return (
             <motion.span
-              className=" font-Frank font-bold text-2xl lg:text-title mr-2 text-gray dark:text-[#dbdbdb]  text-black uppercase text-bold "
+              className="mr-2"
               aria-hidden="true"
               key={index}
               initial="hidden"
@@ -105,6 +105,7 @@ const SectionTitle = ({
               {word.split("").map((character, index) => {
                 return (
                   <motion.span
+                    className=" font-bold text-2xl md:text-title text-gray dark:text-whiteTextDarkMode uppercase text-bold "
                     aria-hidden="true"
                     key={index}
                     variants={characterAnimation}

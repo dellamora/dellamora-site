@@ -78,7 +78,7 @@ const Experience = (): JSX.Element => {
         setInView(state);
       }}
     >
-      <div className="flex  gap-8 md:gap-16 flex-col md:flex-row  ">
+      <div className="flex gap-8 md:gap-16 flex-col md:flex-row  ">
         <div className="flex md:gap-12 flex-col justify-start md:px-10">
           <SectionTitle
             title="Work Experience"

@@ -12,7 +12,7 @@ type Props = {
 };
 const ArticleCard = ({ article }: Props): JSX.Element => {
   return (
-    <div className="bg-white border border-grayLight dark:border-[#242424aa] rounded-lg max-w-sm overflow-hidden  dark:bg-[#131313] ">
+    <div className="bg-white border  border-grayLight dark:border-none rounded-lg max-w-sm overflow-hidden  dark:bg-secondaryDark ">
       <div className="relative aspect-video w-auto ">
         <Image
           className="object-cover"
@@ -23,16 +23,16 @@ const ArticleCard = ({ article }: Props): JSX.Element => {
       </div>
       <div className="p-5">
         <a href={article.url}>
-          <h5 className="hover:underline text-gray font-bold text-xl tracking-tight mb-2 dark:text-white">
+          <h1 className="hover:underline tracking-tight mb-2 md:text-xl ">
             {article.title}
-          </h5>
+          </h1>
         </a>
-        <p className="font-Inter font-medium text-grayMedium mb-3 dark:text-gray-400">
+        <span className="font-Inter font-medium mb-3 ">
           {article.description}
-        </p>
+        </span>
         <a
           href={article.url}
-          className="text-grayMedium dark:text-[#c2bfbf] hover:underline  font-medium  text-sm px-3 py-2 text-center flex justify-center"
+          className="text-grayMedium dark:text-grayLight hover:underline font-medium  text-sm px-3 py-2 text-center flex justify-center"
         >
           Continue Reading
         </a>

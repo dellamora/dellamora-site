@@ -28,7 +28,7 @@ const Hero: React.FC = (): JSX.Element => {
               title="Francielle Dellamora"
               triggerAnimation={inView}
             />
-            <p className="font-Inter  text-gray dark:text-[#c2bfbf] max-w-[33rem] text-justify  mt-10">
+            <p className=" max-w-[33rem] text-justify mt-10">
               Creative front-end developer with more than +2 years of Experience
               in enterprise companies and startups. Proficient in Html, Tailwind
               Css, Javascript and React. Passionate about UI/UX

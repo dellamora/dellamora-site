@@ -35,7 +35,7 @@ const TechItem = ({ experiences }: Props): JSX.Element => {
               h-fit
               px-1 py-1 m-1
               border border-grayLight rounded
-            text-grayMedium font-Inter font-medium font-sm"
+            text-grayMedium dark:text-grayLight font-Inter font-medium font-sm"
           >
             {technologies.name}
           </motion.div>

@@ -2,7 +2,7 @@ import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import React, { useRef, useState } from "react";
 import ButtonOutline from "../../common/components/buttonOutline";
 import { useDimensions } from "../../common/hooks/useDimensions";
-import MenuToggleIcon from "../../common/svgs/menuToggle";
+import MenuToggleIcon from "../../common/svgs/withAnimation/menuToggle";
 import DarkModeToggle from "./components/darkModeToggle";
 import Drawer from "./components/drawer";
 
@@ -30,7 +30,7 @@ const Header: React.FC = (): JSX.Element => {
     <div className="fixed overflow-hidden z-40">
       <nav
         ref={containerRef}
-        className="shrink-0 w-screen flex justify-between p-4  text-gray items-center  bg-primary dark:bg-primaryDark dark:text-[#FCFCFC] "
+        className="shrink-0 w-screen flex justify-between p-4  text-gray items-center  bg-primary dark:bg-primaryDark dark:text-primary "
       >
         <a href="/" className="uppercase font-Inter font-extrabold text-lg  ">
           Dellamora
@@ -43,7 +43,7 @@ const Header: React.FC = (): JSX.Element => {
           <DarkModeToggle />
 
           <MenuToggleIcon
-            className="dark:stroke-white"
+            className="stroke-primaryDark dark:stroke-whiteBasic"
             onClick={() => setIsOpen(current => !current)}
           />
         </motion.div>
@@ -60,7 +60,7 @@ const Header: React.FC = (): JSX.Element => {
           <ButtonOutline
             isLink
             href="https://www.linkedin.com/in/francielle-dellamora-3579301a1/"
-            className="text-gray "
+            className="text-gray dark:text-primary"
           >
             LinkedIn
           </ButtonOutline>

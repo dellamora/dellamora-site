@@ -29,9 +29,9 @@ const AboutMe: React.FC = (): JSX.Element => {
         subTitle="Learning path"
         triggerAnimation={inView}
       />
-      <div className="flex flex-col md:flex-row gap -6  justify-center items-start ">
+      <div className="flex flex-col md:flex-row gap-6  justify-center items-start ">
         <div className="md:w-1/2">
-          <p className="font-Inter text-gray">
+          <p>
             Im a Full-Stack developer with a passion for creating amazing code
             and solving problems. Im always looking for new challenges and
             opportunities to learn and grow. As a Full-Stack Developer I have 2
@@ -50,9 +50,7 @@ const AboutMe: React.FC = (): JSX.Element => {
         >
           {skills.map(skills => (
             <>
-              <h1 className="font-Inter font-semibold  text-gray dark:text-[#fafafa] ">
-                {skills.name}
-              </h1>
+              <h4>{skills.name}</h4>
               <ProgressBar width="w-[60%]" />
             </>
           ))}
