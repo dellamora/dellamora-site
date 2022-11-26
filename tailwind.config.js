@@ -21,8 +21,10 @@ module.exports = {
       redDark: "#D91A23",
       gray: "#232E35",
       grayMedium: "#656D72",
-      grayLight: "#D9D9D9",
+      grayLight: "#D9D9D9", //span e textos
       whiteBasic: " #F5F3FE",
+      whiteTextDarkMode: "#F1F1F1",
+      secondaryDark: "#131313",
     },
     extend: {
       gridTemplateColumns: {
