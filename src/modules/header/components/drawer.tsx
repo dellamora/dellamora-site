@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Instagram from "../../../common/svgs/withAnimation/instagramIcon";
 import GitHub from "../../../common/svgs/withAnimation/gitHub";
 import Twitter from "../../../common/svgs/withAnimation/twitterIcon";
-import SendMail from "../../../common/svgs/withAnimation/sendMail";
 import BuyMeACoffeee from "../../../common/svgs/withAnimation/buyMeACoffeeIcon";
 
 type Props = {
@@ -27,7 +26,7 @@ const Drawer = ({ links, height, handleClose }: Props): JSX.Element => {
   return (
     <motion.div
       style={{ height: `calc(100vh - ${height}px)` }}
-      className={` flex grow flex-col  bg-primary text-gray dark:bg-primaryDark dark:text-[#FBFAFF] p-3 justify-between items-center  `}
+      className={` overflow-y-hidden flex grow flex-col  bg-primary text-gray dark:bg-primaryDark dark:text-[#FBFAFF] p-3 justify-between items-center  `}
       initial={{ x: 360 }}
       animate={{ x: 0 }}
       exit={{ x: 700 }}
@@ -63,13 +62,25 @@ const Drawer = ({ links, height, handleClose }: Props): JSX.Element => {
       </motion.ul>
       <footer>
         <div className=" flex justify-center items-center space-x-8 py-11">
-          <GitHub className="stroke-grayMedium" width="19px" />
-          <Twitter className="stroke-grayMedium" width="22px" />
-          <Instagram className="stroke-grayMedium" width="19px" />
-          <BuyMeACoffeee className="stroke-grayMedium" width="26px" />
+          <GitHub
+            className="stroke-grayMedium dark:stroke-grayLight"
+            width="19px"
+          />
+          <Twitter
+            className="stroke-grayMedium dark:stroke-grayLight"
+            width="22px"
+          />
+          <Instagram
+            className="stroke-grayMedium dark:stroke-grayLight"
+            width="19px"
+          />
+          <BuyMeACoffeee
+            className="stroke-grayMedium dark:stroke-grayLight"
+            width="26px"
+          />
         </div>
         <div className="flex justify-center items-center pb-[88px]">
-          <p className="font-Inter text-grayMedium">
+          <p className="font-Inter text-grayMedium dark:text-grayLight">
             © 2022 — @francidellamora
           </p>
         </div>
