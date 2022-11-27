@@ -41,7 +41,7 @@ const Contact = (): JSX.Element => {
           <ButtonOutline
             href="mailto:francielle@dellamora.dev"
             isLink={false}
-            className="w-full rounded  text-redLight border-redLight dark:border-redLight  dark:text-redLight text-center"
+            className="w-full rounded transition-colors hover:bg-grayLight/20 dark:hover:bg-primaryDark/20 text-redLight border-redLight dark:border-redLight  dark:text-redLight text-center"
           >
             Send Mail
           </ButtonOutline>

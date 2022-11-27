@@ -60,7 +60,7 @@ const Header: React.FC = (): JSX.Element => {
           <ButtonOutline
             isLink
             href="https://www.linkedin.com/in/francielle-dellamora-3579301a1/"
-            className="text-grayMedium dark:text-grayLight text-sm rounded-lg border-grayLight"
+            className="text-grayMedium dark:text-grayLight text-sm rounded-lg border-grayLight transition-colors hover:bg-grayLight/20 dark:hover:bg-secondaryDark/50"
           >
             LinkedIn
           </ButtonOutline>

@@ -60,6 +60,7 @@ const TechItem = ({ experiences }: Props): JSX.Element => {
           w-fit
           h-fit
           px-1 py-1 m-1
+          transition-colors hover:bg-grayLight/20 dark:hover:bg-primaryDark/20
           border border-redLight rounded 
         text-redLight font-Inter font-medium font-sm"
         >
