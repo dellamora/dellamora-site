@@ -3,7 +3,7 @@
 import React from "react";
 import Section from "../../common/components/section";
 import CardProject from "./components/card";
-
+// fazer paginacao nessa section
 const Portfolio: React.FC = (): JSX.Element => {
   return (
     <Section

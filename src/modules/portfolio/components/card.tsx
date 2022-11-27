@@ -9,7 +9,7 @@ const CardProject = (): JSX.Element => {
   return (
     <motion.div className="relative h-56 rounded overflow-hidden flex justify-start">
       <motion.div
-        className="flex flex-col justify-end items-start z-10 p-3 bg-secondaryDark/50 w-full"
+        className="flex flex-col justify-end items-start z-10 p-3 bg-primaryLight/20 dark:bg-secondaryDark/50 w-full"
         initial={{
           opacity: 0,
         }}
@@ -18,6 +18,7 @@ const CardProject = (): JSX.Element => {
         <h1 className="font-bold">Project Name</h1>
         <h4> View Project</h4>
       </motion.div>
+
       <Image
         className="absolute object-cover aspect-video "
         alt="movie poster"

@@ -20,7 +20,9 @@ type Props = {
 const JonInfo = ({ experiences }: Props): JSX.Element => {
   return (
     <div className="flex flex-col gap-3">
-      <h1 className="font-Inter ">{experiences.role}</h1>
+      <h1 className="font-Inter md:text-2xl lg:text-3xl ">
+        {experiences.role}
+      </h1>
       <h2>{experiences.address} </h2>
       <h3>
         {experiences.period.start} - {experiences.period.end} ·
