@@ -1,15 +1,20 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { JobsInfo } from "../../../domain/interfaces";
+import { useEffect, useState } from "react";
+import { InfoJob } from "../../../domain/interfaces";
 
 type Props = {
-  experiences: Pick<JobsInfo, "company" | "technologies">;
+  experiences: Pick<InfoJob, "company" | "technologies">;
+  current: number;
+  inView: boolean;
 };
 
-const TechItem = ({ experiences }: Props): JSX.Element => {
+const TechItem = ({ experiences, current, inView }: Props): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    setIsOpen(false);
+  }, [current]);
 
   return (
     <div className="text-placeholder flex flex-wrap ">
@@ -17,15 +22,17 @@ const TechItem = ({ experiences }: Props): JSX.Element => {
         .slice(0, isOpen ? experiences.technologies.length : 3)
         .map((technologies, index) => (
           <motion.div
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-              transition: {
-                delay: Math.max(index - 3, isOpen ? 0 : index) * 0.2,
-              },
-            }}
+            animate={
+              inView
+                ? {
+                    opacity: 1,
+                    transition: {
+                      delay:
+                        1.5 + Math.max(index - 3, isOpen ? 0 : index) * 0.2,
+                    },
+                  }
+                : { opacity: 0 }
+            }
             transition={{
               x: { stiffness: 1000 },
             }}
@@ -42,15 +49,16 @@ const TechItem = ({ experiences }: Props): JSX.Element => {
         ))}
       {!isOpen && (
         <motion.button
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-            transition: {
-              delay: 0.6,
-            },
-          }}
+          animate={
+            inView
+              ? {
+                  opacity: 1,
+                  transition: {
+                    delay: 1.5 + 0.6,
+                  },
+                }
+              : { opacity: 0 }
+          }
           transition={{
             x: { stiffness: 1000 },
           }}
