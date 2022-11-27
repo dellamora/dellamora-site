@@ -39,7 +39,7 @@ export interface User {
   profile_image_90: string;
 }
 
-export interface JobsInfo {
+export interface InfoJob {
   company?: string;
   address?: string;
   period?: Period;

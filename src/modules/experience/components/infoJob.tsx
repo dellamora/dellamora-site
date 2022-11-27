@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from "react";
-import { JobsInfo } from "../../../domain/interfaces";
+import { InfoJob } from "../../../domain/interfaces";
 import TechItem from "./techItem";
 
 type Props = {
   experiences: Pick<
-    JobsInfo,
+    InfoJob,
     | "address"
     | "role"
     | "period"
@@ -15,9 +15,11 @@ type Props = {
     | "description"
     | "technologies"
   >;
+  current: number;
+  inView: boolean;
 };
 
-const JonInfo = ({ experiences }: Props): JSX.Element => {
+const JonInfo = ({ experiences, current, inView }: Props): JSX.Element => {
   return (
     <div className="flex flex-col gap-3">
       <h1 className="font-Inter md:text-2xl lg:text-3xl ">
@@ -28,7 +30,12 @@ const JonInfo = ({ experiences }: Props): JSX.Element => {
         {experiences.period.start} - {experiences.period.end} ·
         {experiences.modality}
       </h3>
-      <TechItem experiences={experiences} key={"jobInfo"} />
+      <TechItem
+        experiences={experiences}
+        key={"jobInfo"}
+        current={current}
+        inView={inView}
+      />
       <hr className="text-grayLight" />
       {experiences.description.map((description, i) => (
         <div key={i} className="flex  ">

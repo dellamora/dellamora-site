@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import Section from "../../common/components/section";
 import SectionTitle from "../../common/components/sectionTitle";
 import CompanyButton from "./components/companyButton";
-import JonInfo from "./components/jobInfo";
+import InfoJob from "./components/infoJob";
 import TechItem from "./components/techItem";
 
 const experiences = [
@@ -102,9 +102,11 @@ const Experience = (): JSX.Element => {
           </motion.div>
         </div>
         <div className="md:w-3/5">
-          <JonInfo
+          <InfoJob
+            current={currentExperience}
             experiences={experiences[currentExperience]}
             key={"jobInfo"}
+            inView={inView}
           />
         </div>
       </div>

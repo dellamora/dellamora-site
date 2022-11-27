@@ -4,10 +4,10 @@ import exp from "constants";
 import { motion } from "framer-motion";
 import React from "react";
 import ChevronRight from "../../../common/svgs/chevronRight";
-import { JobsInfo } from "../../../domain/interfaces";
+import { InfoJob } from "../../../domain/interfaces";
 
 type Props = {
-  experiences: Pick<JobsInfo, "company">;
+  experiences: Pick<InfoJob, "company">;
   onClick: () => void;
   active: boolean;
 };
