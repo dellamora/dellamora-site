@@ -76,7 +76,7 @@ const Header: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
       <motion.div
-        className=" absolute top-0 left-0 right-0 h-[3px] origin-[0%] dark:bg-primary bg-primaryDark"
+        className=" absolute bottom-0 left-0 right-0 h-[3px] origin-[0%] dark:bg-primary bg-primaryDark"
         style={{ scaleX }}
       />
     </div>
