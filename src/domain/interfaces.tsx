@@ -57,3 +57,12 @@ export interface Period {
 export interface Technology {
   name?: string;
 }
+
+export interface Projects {
+  name?: string;
+  id?: number;
+  period?: Period;
+  technologies?: string[];
+  description?: string[];
+  link?: string;
+}

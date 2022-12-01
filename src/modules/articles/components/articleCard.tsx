@@ -3,7 +3,6 @@
 import React from "react";
 import { ArticlesDevTo } from "../../../domain/interfaces";
 import Image from "next/image";
-import { motion } from "framer-motion";
 type Props = {
   article: Pick<
     ArticlesDevTo,

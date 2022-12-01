@@ -3,8 +3,11 @@
 import React from "react";
 import Section from "../../common/components/section";
 import CardProject from "./components/card";
-import MobileCardProject from "./components/mobileCard";
-// fazer paginacao nessa section
+
+const projects = [
+  {name: "DellaFlix ", id: 1, description: "isloremnbla blasaksa pedro bla bla blue blue", img: "url(kkkkk)", link: "dellaflix.vercel.com.br", technologies: ["react", "deded"]}
+]
+
 const Portfolio: React.FC = (): JSX.Element => {
   return (
     <Section
@@ -14,11 +17,10 @@ const Portfolio: React.FC = (): JSX.Element => {
       className="bg-primaryLight dark:bg-primaryDark flex flex-col gap-10"
     >
       <div className="grid grid-cols-cards gap-10">
-        <MobileCardProject/>
-
-        <CardProject />
-        <CardProject />
-        <CardProject /> 
+        {projects.map((project, id) => {
+          return <CardProject project={project}/> 
+        } )}
+        
       </div>
     </Section>
   );
