@@ -13,6 +13,7 @@ function getWindowDimensions() {
 export default function useWindowDimensions(): {
   width: number;
   height: number;
+  isMobile: boolean;
 } {
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions(),
@@ -27,5 +28,5 @@ export default function useWindowDimensions(): {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return windowDimensions;
+  return {...windowDimensions, isMobile: windowDimensions.width < 768};
 }
