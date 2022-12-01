@@ -5,16 +5,11 @@ import Image from "next/image";
 
 //fazer um card diferente para mobile pq n tem hover hehehehe
 
-const CardProject = (): JSX.Element => {
+const MobileCardProject = (): JSX.Element => {
   return (
     <motion.div className="relative h-56 rounded overflow-hidden flex justify-start">
-      
       <motion.div
-        className="flex flex-col justify-end items-start z-10 p-3 bg-primaryLight/50 dark:bg-secondaryDark/50 w-full "
-        initial={{
-          opacity: 0,
-        }}
-        whileHover={{ opacity: 1 }}
+        className="flex flex-col justify-end items-start z-10 p-3 bg-primaryLight/50 dark:bg-secondaryDark/50 w-full"
       >
         <h1 className="font-bold text-secondaryDark">DellaFlix</h1>
         <h4 className="text-sm text-secondaryDark" > learn more</h4>
@@ -30,4 +25,4 @@ const CardProject = (): JSX.Element => {
   );
 };
 
-export default CardProject;
+export default MobileCardProject;
