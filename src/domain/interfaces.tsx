@@ -61,7 +61,7 @@ export interface Technology {
 export interface Projects {
   name?: string;
   id?: number;
-  period?: Period;
+  data?: string;
   technologies?: string[];
   description?: string[];
   link?: string;
