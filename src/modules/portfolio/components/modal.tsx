@@ -41,18 +41,18 @@ export default function ModalProject({  isOpen, onClose, project}: Props){
             <div className="flex flex-col gap-5 p-4">
             <CloseIcon className="block md:hidden absolute top-0 right-0 " onClick={() => {onClose()}}/>
 
-              <h1 className="tracking-tight ">
+              <h1 className="font-bold text-2xl md:text-title text-gray dark:text-whiteTextDarkMode  text-bold ">
                 {project.name}
               </h1>
-              <span className="font-Inter font-medium mb-3 text-justify">
+              <span className="font-Inter font-medium mb-3 text-justify dark:text-grayLight">
                 {project.description}
               </span>
               <div className="flex flex-row  flex-wrap ">
-                <h3 className="pr-2">Stack:</h3>
+                <h3 className="pr-2 text-base">Stack:</h3>
               {project.technologies.map((technology, i) => {
                 return (
                   <>
-                    <h3 className="font-thin">{technology}
+                    <h3 className="font-thin text-base">{technology}
                     {
                       i !== project.technologies.length - 1 
                       && <span className="px-2 text-redLight">•</span>
