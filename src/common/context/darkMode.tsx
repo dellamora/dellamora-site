@@ -1,8 +1,7 @@
-import { time } from "console";
 import React, { createContext, useState, useEffect } from "react";
 
 interface DarkModeContextInterface {
-  isDark: boolean;
+  isDark: boolean ;
   toggleDarkMode: () => void;
 }
 
@@ -45,7 +44,7 @@ export const DarkModeContextProvider = ({
 
   return (
     <DarkModeContext.Provider value={{ isDark, toggleDarkMode }}>
-      <div className={isDark && "dark"}>{children}</div>
+      <div className={isDark ? "dark" : " "}>{children}</div>
     </DarkModeContext.Provider>
   );
 };
