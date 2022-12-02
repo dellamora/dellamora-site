@@ -3,15 +3,19 @@ import { createPortal } from "react-dom";
 import Backdrop from "./backdrop";
 import Image from "next/image";
 import { Projects } from "../../../domain/interfaces";
+import CloseIcon from "../../../common/svgs/closeIcon";
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
-
+  project?: Pick<
+  Projects,
+    "name" | "description" |  "link" | "technologies" | "data"
+  >;
 
 }
 
-export default function ModalProject({  isOpen, onClose}: Props){
+export default function ModalProject({  isOpen, onClose, project}: Props){
   const [mount, setMount] = useState(false)
 
   useEffect(() => {
@@ -22,31 +26,48 @@ export default function ModalProject({  isOpen, onClose}: Props){
   }
   return createPortal(
     <>
-    {isOpen && 
+    {isOpen && project &&
       <>
-        <div className="flex fixed justify-center items-center z-50  h-screen w-screen pointer-events-none overscroll-y-contain">
-          <div className="  pointer-events-auto bg-white border border-grayLight dark:border-none rounded-lg max-w-sm overflow-hidden bg-primaryLight dark:bg-secondaryDark ">
-          <div className="relative aspect-video w-auto ">
-        <Image
-          className="object-cover"
-          alt="project image"
-          fill
-          src="https://criticalhits.com.br/wp-content/uploads/2020/09/anbu-minato-768x432.jpg"
-        />
-      </div>
-      <div className="p-4">
-       ccc
-          <h1 className="hover:underline tracking-tight mb-2 md:text-xl ">
-            sasa
-          </h1>
-        {/* </a> */}
-        <span className="font-Inter font-medium mb-3 ">
-       ccc
-        </span>
+        <div className=" flex fixed justify-center items-center z-50  h-screen  w-screen pointer-events-none overscroll-y-contain ">
+          <div className="relative overflow-y-auto pointer-events-auto bg-white rounded-lg w-full lg:max-w-2xl  h-auto max-h-screen  md:w-3/5 overflow-hidden bg-primaryLight dark:bg-secondaryDark ">
+            <div className="relative aspect-video">
+              <Image
+                className="object-cover"
+                alt="project image"
+                fill
+                src="https://criticalhits.com.br/wp-content/uploads/2020/09/anbu-minato-768x432.jpg"
+              />
+            </div>
+            <div className="flex flex-col gap-5 p-4">
+            <CloseIcon className="block md:hidden absolute top-0 right-0 " onClick={() => {onClose()}}/>
 
-      </div>
+              <h1 className="tracking-tight ">
+                {project.name}
+              </h1>
+              <span className="font-Inter font-medium mb-3 text-justify">
+                {project.description}
+              </span>
+              <div className="flex flex-row  flex-wrap ">
+                <h3 className="pr-2">Stack:</h3>
+              {project.technologies.map((technology, i) => {
+                return (
+                  <>
+                    <h3 className="font-thin">{technology}
+                    {
+                      i !== project.technologies.length - 1 
+                      && <span className="px-2 text-redLight">•</span>
+                    }
+                    </h3>
+                  </>
+                )
+              })}
+              </div>
+              <a href={project.link} >
+                <h3 className=" w-fit px-2 py-1 font-thin rounded-sm text-redLight dark:text-redLight ">View Project</h3>
+              </a>
+            </div>
           </div>
-        </div>
+          </div>
         <Backdrop onClose={() => {onClose()}} /></>}
       </>, document.getElementById("modal-root")
 
