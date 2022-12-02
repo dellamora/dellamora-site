@@ -39,7 +39,7 @@ const Drawer = ({ links, height, handleClose }: Props): JSX.Element => {
       >
         {links.map(({ name, to, id }) => (
           <motion.li
-            key={id}
+            key={`link-${id}`}
             initial={{
               opacity: 0,
             }}

@@ -48,11 +48,11 @@ const AboutMe: React.FC = (): JSX.Element => {
           animate={inView ? "animate" : "default"}
           className=" w-full justify-center items-center md:w-1/2"
         >
-          {skills.map(skills => (
-            <>
+          {skills.map((skills, i) => (
+            <div key={`skill-${i}`}>
               <h4>{skills.name}</h4>
               <ProgressBar width="w-[60%]" />
-            </>
+            </div>
           ))}
         </motion.div>
       </div>

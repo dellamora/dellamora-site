@@ -32,7 +32,7 @@ const Portfolio: React.FC = (): JSX.Element => {
     >
       <div className="grid grid-cols-cards gap-10">
         {projects.map((project, id) => {
-          return <CardProject project={project} onClick={() => setCurrentProject(project.id)}/>;
+          return <CardProject key={`card-${id}`} project={project} onClick={() => setCurrentProject(project.id)}/>;
         })}
 
       </div>

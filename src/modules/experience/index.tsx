@@ -91,7 +91,7 @@ const Experience = (): JSX.Element => {
               return (
                 <CompanyButton
                   experiences={job}
-                  key={"jobInfo"}
+                  key={`job-${job.company}`}
                   active={currentExperience === index}
                   onClick={() => {
                     setCurrentExperience(index);
@@ -104,8 +104,8 @@ const Experience = (): JSX.Element => {
         <div className="md:w-3/5">
           <InfoJob
             current={currentExperience}
-            experiences={experiences[currentExperience]}
-            key={"jobInfo"}
+            experience={experiences[currentExperience]}
+            key={`job-details-${experiences[currentExperience].company}`}
             inView={inView}
           />
         </div>

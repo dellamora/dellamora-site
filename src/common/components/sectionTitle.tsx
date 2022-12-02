@@ -55,7 +55,7 @@ const SectionTitle = ({
               <motion.span
                 className=" font-Inter text-subTitle mr-2 text-grayMedium  uppercase text-bold "
                 aria-hidden="true"
-                key={index}
+                key={`key-${word}-${index}`}
                 initial="hidden"
                 animate={triggerAnimation ? "visible" : "hidden"}
                 variants={wordAnimation}
@@ -72,7 +72,7 @@ const SectionTitle = ({
                   return (
                     <motion.span
                       aria-hidden="true"
-                      key={index}
+                      key={`key-${character}-${index}`}
                       variants={characterAnimation}
                     >
                       {character}
@@ -90,7 +90,7 @@ const SectionTitle = ({
             <motion.span
               className="mr-2"
               aria-hidden="true"
-              key={index}
+              key={`key-${word}-${index}`}
               initial="hidden"
               animate={triggerAnimation ? "visible" : "hidden"}
               variants={wordAnimation}
@@ -107,7 +107,7 @@ const SectionTitle = ({
                   <motion.span
                     className=" font-bold text-2xl md:text-title text-gray dark:text-whiteTextDarkMode uppercase text-bold "
                     aria-hidden="true"
-                    key={index}
+                    key={`key-${character}-${index}`}
                     variants={characterAnimation}
                   >
                     {character}

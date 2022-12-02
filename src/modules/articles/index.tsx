@@ -56,7 +56,7 @@ const Articles = (): JSX.Element => {
         >
           {data.map(article => {
             return (
-              <SwiperSlide key={article.id}>
+              <SwiperSlide key={`article-${article.id}`}>
                 <ArticleCard article={article} />
               </SwiperSlide>
             );
