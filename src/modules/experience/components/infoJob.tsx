@@ -5,7 +5,7 @@ import { InfoJob } from "../../../domain/interfaces";
 import TechItem from "./techItem";
 
 type Props = {
-  experiences: Pick<
+  experience: Pick<
     InfoJob,
     | "address"
     | "role"
@@ -19,26 +19,25 @@ type Props = {
   inView: boolean;
 };
 
-const JonInfo = ({ experiences, current, inView }: Props): JSX.Element => {
+const InfoJob = ({ experience, current, inView }: Props): JSX.Element => {
   return (
     <div className="flex flex-col gap-3">
       <h1 className="font-Inter md:text-2xl lg:text-3xl ">
-        {experiences.role}
+        {experience.role}
       </h1>
-      <h2>{experiences.address} </h2>
+      <h2>{experience.address} </h2>
       <h3>
-        {experiences.period.start} - {experiences.period.end} ·
-        {experiences.modality}
+        {experience.period.start} - {experience.period.end} ·
+        {experience.modality}
       </h3>
       <TechItem
-        experiences={experiences}
-        key={"jobInfo"}
+        experience={experience}
         current={current}
         inView={inView}
       />
       <hr className="text-grayLight" />
-      {experiences.description.map((description, i) => (
-        <div key={i} className="flex  ">
+      {experience.description.map((description, i) => (
+        <div key={`job-${experience}-description-${i}`} className="flex  ">
           <div className="mr-3 h-0.5 w-4 shrink-0 bg-grayLight mt-3" />
           <p>{description}</p>
         </div>
@@ -47,4 +46,4 @@ const JonInfo = ({ experiences, current, inView }: Props): JSX.Element => {
   );
 };
 
-export default JonInfo;
+export default InfoJob;

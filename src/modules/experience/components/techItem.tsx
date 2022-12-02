@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 import { InfoJob } from "../../../domain/interfaces";
 
 type Props = {
-  experiences: Pick<InfoJob, "company" | "technologies">;
+  experience: Pick<InfoJob, "company" | "technologies">;
   current: number;
   inView: boolean;
 };
 
-const TechItem = ({ experiences, current, inView }: Props): JSX.Element => {
+const TechItem = ({ experience, current, inView }: Props): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
    useEffect(() => {
      setIsOpen(false);
@@ -21,8 +21,8 @@ const TechItem = ({ experiences, current, inView }: Props): JSX.Element => {
      initial="hidden"
       animate={inView ? "view" : "hidden"}
       className="text-placeholder flex flex-wrap ">
-      {experiences.technologies
-        .slice(0, isOpen ? experiences.technologies.length : 3)
+      {experience.technologies
+        .slice(0, isOpen ? experience.technologies.length : 3)
         .map((technology, index) => (
           <motion.div
             key={technology.name + "-" + current}
