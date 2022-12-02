@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import SectionTitle from "../../common/components/sectionTitle";
+import { motion } from "framer-motion";
 
 const Articles = (): JSX.Element => {
   const [inView, setInview] = useState(false);
@@ -37,7 +38,8 @@ const Articles = (): JSX.Element => {
         subTitle="My articles"
         triggerAnimation={inView}
       />
-      <div className="flex items-center">
+      <div 
+      className="flex items-center">
         <Swiper
           breakpoints={{
             640: {
@@ -57,7 +59,7 @@ const Articles = (): JSX.Element => {
           {data.map(article => {
             return (
               <SwiperSlide key={`article-${article.id}`}>
-                <ArticleCard article={article} />
+                <ArticleCard article={article} inView={inView} />
               </SwiperSlide>
             );
           })}
