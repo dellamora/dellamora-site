@@ -1,9 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from "react";
-
-/* import { Container } from "./styles"; */
-
 const Footer: React.FC = (): JSX.Element => {
   return (
     <footer className="text-grayMedium bg-primary dark:bg-primaryDark p-4  md:flex md:items-center md:justify-between md:p-6 ">
