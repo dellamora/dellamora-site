@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
+import { AnimatePresence, motion, MotionValue, useScroll, useSpring } from "framer-motion";
 import React, { useRef, useState } from "react";
 import ButtonOutline from "../../common/components/buttonOutline";
 import { useDimensions } from "../../common/hooks/useDimensions";
@@ -6,11 +6,12 @@ import MenuToggleIcon from "../../common/svgs/withAnimation/menuToggle";
 import DarkModeToggle from "./components/darkModeToggle";
 import Drawer from "./components/drawer";
 
-const Header: React.FC = (): JSX.Element => {
+const Header = ({scrollProgress}: {
+  scrollProgress: MotionValue<number>
+}): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-  const { scrollYProgress } = useScroll();
 
   const links = [
     { name: "Portfolio", to: "#portfolio", id: 1 },
@@ -20,14 +21,14 @@ const Header: React.FC = (): JSX.Element => {
     { name: "Contact", to: "#contact", id: 5 },
   ];
 
-  const scaleX = useSpring(scrollYProgress, {
+  const scaleX = useSpring(scrollProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
   });
 
   return (
-    <div className="fixed overflow-hidden z-40">
+    <div className="fixed overflow-hidden z-30">
       <nav
         ref={containerRef}
         className="shrink-0 w-screen flex justify-between p-4  text-gray items-center  bg-primary dark:bg-primaryDark dark:text-primary "
@@ -59,7 +60,7 @@ const Header: React.FC = (): JSX.Element => {
           <DarkModeToggle />
           <ButtonOutline
             isLink
-            href="https://www.linkedin.com/in/francielle-dellamora-3579301a1/"
+            href="https://www.linkedin.comoin/francielle-dellamora-3579301a1/"
             className="text-grayMedium dark:text-grayLight text-sm rounded-lg border-grayLight transition-colors hover:bg-grayLight/20 dark:hover:bg-secondaryDark/50"
           >
             LinkedIn
