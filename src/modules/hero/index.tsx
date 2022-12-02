@@ -9,6 +9,7 @@ import Twitter from "../../common/svgs/withAnimation/twitterIcon";
 import BuyMeACoffeee from "../../common/svgs/withAnimation/buyMeACoffeeIcon";
 import SectionTitle from "../../common/components/sectionTitle";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Hero: React.FC = (): JSX.Element => {
   const { ref, inView } = useInView({
@@ -28,11 +29,17 @@ const Hero: React.FC = (): JSX.Element => {
               title="Francielle Dellamora"
               triggerAnimation={inView}
             />
-            <p className=" max-w-[33rem] text-justify mt-10">
+            <motion.p 
+              className=" max-w-[33rem] text-justify mt-10"
+              initial={{opacity: 0, }}
+              animate={{opacity: 1, }}
+              transition={{delay: 2}}
+            >
+
               Creative front-end developer with more than +2 years of Experience
               in enterprise companies and startups. Proficient in Html, Tailwind
               Css, Javascript and React. Passionate about UI/UX
-            </p>
+            </motion.p>
             <div className="flex justify-center lg:justify-start space-x-8 items-center py-10">
               <GitHub className="stroke-redLight" width="20px" />
               <Twitter className="stroke-redLight" width="22px" />
