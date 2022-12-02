@@ -9,11 +9,14 @@ type Props = {
   Projects,
     "name" 
   >;
+  onClick: () => void
 };
-const CardProject = ({ project }: Props): JSX.Element => {
+const CardProject = ({ project , onClick}: Props): JSX.Element => {
   const {isMobile} = useWindowDimensions()
   return (
-    <motion.div className="relative h-56 rounded overflow-hidden flex justify-start w-96">
+    <motion.div 
+    className="relative h-56 rounded overflow-hidden flex justify-start w-96" 
+    onClick={onClick}>
       <motion.div
         className="flex flex-col  self-end md:self-start justify-end items-start z-10 p-3 bg-primaryLight/50 dark:bg-secondaryDark/50 w-full h-1/3 md:h-full"
         initial={{
