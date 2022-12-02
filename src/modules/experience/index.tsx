@@ -2,12 +2,10 @@
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { useInView } from "react-intersection-observer";
 import Section from "../../common/components/section";
 import SectionTitle from "../../common/components/sectionTitle";
 import CompanyButton from "./components/companyButton";
 import InfoJob from "./components/infoJob";
-import TechItem from "./components/techItem";
 
 const experiences = [
   {
