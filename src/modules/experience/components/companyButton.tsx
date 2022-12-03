@@ -37,7 +37,7 @@ const CompanyButton = ({
         >
           <ChevronRight
             width="25px"
-            className="hidden sm:block mr-4 stroke-redLight "
+            className="hidden md:block mr-4 stroke-redLight "
           />
         </motion.div>
       )}
