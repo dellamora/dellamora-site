@@ -4,6 +4,7 @@ import Backdrop from "./backdrop";
 import Image from "next/image";
 import { Projects } from "../../../domain/interfaces";
 import CloseIcon from "../../../common/svgs/closeIcon";
+import { motion } from "framer-motion";
 
 type Props = {
   isOpen: boolean;
@@ -28,7 +29,10 @@ export default function ModalProject({  isOpen, onClose, project}: Props){
     <>
     {isOpen && project &&
       <>
-        <div className=" flex fixed justify-center items-center z-50  h-screen  w-screen pointer-events-none overscroll-y-contain ">
+        <motion.div 
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        className=" flex fixed justify-center items-center z-50  h-screen  w-screen pointer-events-none overscroll-y-contain ">
           <div className="relative overflow-y-auto pointer-events-auto bg-white rounded-lg w-full lg:max-w-2xl  h-auto max-h-screen  md:w-3/5 overflow-hidden bg-primaryLight dark:bg-secondaryDark ">
             <div className="relative aspect-video">
               <Image
@@ -67,7 +71,7 @@ export default function ModalProject({  isOpen, onClose, project}: Props){
               </a>
             </div>
           </div>
-          </div>
+          </motion.div>
         <Backdrop onClose={() => {onClose()}} /></>}
       </>, document.getElementById("modal-root")
 

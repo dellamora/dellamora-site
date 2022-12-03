@@ -29,10 +29,19 @@ const AboutMe: React.FC = (): JSX.Element => {
         subTitle="Learning path"
         triggerAnimation={inView}
       />
-      <div className="flex flex-col md:flex-row gap-6  justify-center items-start ">
-        <div className="md:w-1/2">
-          <p>
-            Im a Full-Stack developer with a passion for creating amazing code
+      <motion.div 
+        className="flex flex-col md:flex-row gap-6  justify-center items-start"
+        initial="hidden"
+        animate={inView ? "view" : "hidden"}  
+      >
+        <motion.div 
+          className="md:w-1/2"
+          initial={{opacity: 0}}
+          animate={inView ?  {opacity: 1, transition:{delay: 1.6}} : {opacity: 0}} 
+        >
+          <p id={"first-p"}>
+          orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            {/* Im a Full-Stack developer with a passion for creating amazing code
             and solving problems. Im always looking for new challenges and
             opportunities to learn and grow. As a Full-Stack Developer I have 2
             main Languages, TypeScript and Python. Python being most for Data
@@ -41,9 +50,9 @@ const AboutMe: React.FC = (): JSX.Element => {
             tools like NextJS, ExpressJS, MongoDB / PostgresSQL and Apollo I can
             do almost everything! I also have experience with Docker and Jest to
             make sure my code works as intended. You can check the About Me Page
-            if you want to know more!
+            if you want to know more! */}
           </p>
-        </div>
+        </motion.div>
         <motion.div
           animate={inView ? "animate" : "default"}
           className=" w-full justify-center items-center md:w-1/2"
@@ -55,7 +64,7 @@ const AboutMe: React.FC = (): JSX.Element => {
             </div>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </Section>
   );
 };

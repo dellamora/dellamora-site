@@ -4,14 +4,13 @@ import Section from "../../common/components/section";
 import ArticleCard from "./components/articleCard";
 import { ArticlesDevTo } from "../../domain/interfaces";
 import { useQuery } from "@tanstack/react-query";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import SectionTitle from "../../common/components/sectionTitle";
-import { motion } from "framer-motion";
 
 const Articles = (): JSX.Element => {
   const [inView, setInview] = useState(false);

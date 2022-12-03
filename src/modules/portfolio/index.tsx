@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React, { useState } from "react";
+import { InView } from "react-intersection-observer";
 import Section from "../../common/components/section";
 import CardProject from "./components/card";
 import ModalProject from "./components/modal";
@@ -20,6 +21,7 @@ const projects = [
 ]
 
 const Portfolio: React.FC = (): JSX.Element => {
+  const [inView, setInview] = useState(false);
   const [currentProject, setCurrentProject] = useState<number | null>(null);
 
   return (
@@ -29,10 +31,11 @@ const Portfolio: React.FC = (): JSX.Element => {
       title="My Projects"
       subTitle="Featured Portifolios "
       className=" bg-primaryLight dark:bg-primaryDark flex flex-col gap-10"
+      setIsInView={() => {setInview(true)}}
     >
       <div className="grid grid-cols-cards gap-10">
         {projects.map((project, id) => {
-          return <CardProject key={`card-${id}`} project={project} onClick={() => setCurrentProject(project.id)}/>;
+          return <CardProject key={`card-${id}`} project={project} onClick={() => setCurrentProject(project.id)} inView={inView}/>;
         })}
 
       </div>

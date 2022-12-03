@@ -88,6 +88,7 @@ const Experience = (): JSX.Element => {
             {experiences.map((job, index) => {
               return (
                 <CompanyButton
+                  inView={inView}
                   experiences={job}
                   key={`job-${job.company}`}
                   active={currentExperience === index}

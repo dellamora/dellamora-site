@@ -18,7 +18,7 @@ const TechItem = ({ experience, current, inView }: Props): JSX.Element => {
 
   return (
     <motion.div 
-     initial="hidden"
+      initial="hidden"
       animate={inView ? "view" : "hidden"}
       className="text-placeholder flex flex-wrap ">
       {experience.technologies
