@@ -24,13 +24,18 @@ const SectionTitle = ({
     hidden: {
       opacity: 0,
       y: `0.25em`,
+      rotate: "12deg", 
+      x: -100
     },
     visible: {
       opacity: 1,
       y: `0em`,
+      rotate: "0deg",
+      x: 0,
       transition: {
         duration: 1,
         ease: [0.2, 0.65, 0.3, 0.9],
+
       },
     },
   };
@@ -48,7 +53,7 @@ const SectionTitle = ({
             transition={{
               delay: 0.5,
             }}
-            className="hidden md:flex mr-3 h-0.5 w-4 bg-grayLight  "
+            className="hidden md:flex mr-3 h-0.5 w-4 bg-grayLight "
           />
           {subTitle.split(" ").map((word, index) => {
             return (
@@ -71,6 +76,7 @@ const SectionTitle = ({
                 {word.split("").map((character, index) => {
                   return (
                     <motion.span
+                    
                       aria-hidden="true"
                       key={`key-${character}-${index}`}
                       variants={characterAnimation}
