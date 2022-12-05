@@ -2,7 +2,7 @@
 module.exports = {
   darkMode: "class",
   mode: "jit",
-  purge: [
+  content: [
     "./src/pages/**/*.tsx",
     "./src/common/**/*.tsx",
     "./src/modules/**/*.tsx",
