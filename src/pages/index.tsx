@@ -1,3 +1,4 @@
+import Head from "next/head";
 import AboutMe from "../modules/aboutMe";
 import Articles from "../modules/articles";
 import Contact from "../modules/contact";
@@ -9,6 +10,9 @@ import Portfolio from "../modules/portfolio";
 export default function Home() {
   return (
     <div className="">
+      <Head>
+        <title>Francielle Dellamora</title>
+      </Head>
       <Hero />
       <Portfolio />
       <Articles />
