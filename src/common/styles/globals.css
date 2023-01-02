@@ -37,17 +37,17 @@ src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;50
 }
 
 p {
-  @apply font-Inter text-gray dark:text-grayLight
+  @apply font-Inter text-gray dark:text-grayLight text-lg
 }
 span {
-  @apply font-Inter text-gray dark:text-grayMedium
+  @apply font-Inter text-gray dark:text-grayMedium 
 }
 h1 {
   @apply font-Inter font-bold text-gray text-2xl md:text-3xl dark:text-whiteTextDarkMode 
 }
 
 h2 {
-  @apply font-Inter text-grayMedium dark:text-grayLight text-sm
+  @apply font-Inter text-grayMedium dark:text-grayLight text-base
 }
 h3 {
   @apply font-Inter text-sm font-semibold text-grayMedium dark:text-grayLight
