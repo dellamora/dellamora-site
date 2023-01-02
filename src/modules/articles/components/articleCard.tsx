@@ -9,7 +9,7 @@ type Props = {
     ArticlesDevTo,
     "title" | "description" | "url" | "cover_image" | "published_at"
   >;
-  inView: boolean
+  inView: boolean;
 };
 const ArticleCard = ({ article, inView }: Props): JSX.Element => {
   return (
@@ -17,11 +17,12 @@ const ArticleCard = ({ article, inView }: Props): JSX.Element => {
       initial="hidden"
       animate={inView ? "view" : "hidden"}
       variants={{
-        hidden: {opacity: 0}, 
-        view: { 
-         opacity: 1, transition:{delay: 1.4}
-       }
-     }}
+        hidden: { opacity: 0 },
+        view: {
+          opacity: 1,
+          transition: { delay: 1.4 },
+        },
+      }}
       className="bg-white border  border-grayLight dark:border-none rounded-lg max-w-sm overflow-hidden  dark:bg-secondaryDark "
     >
       <div className="relative aspect-video w-auto ">

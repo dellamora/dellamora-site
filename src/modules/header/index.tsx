@@ -1,10 +1,4 @@
-import {
-  AnimatePresence,
-  motion,
-  MotionValue,
-  useScroll,
-  useSpring,
-} from "framer-motion";
+import { AnimatePresence, motion, MotionValue, useSpring } from "framer-motion";
 import React, { useRef, useState } from "react";
 import ButtonOutline from "../../common/components/buttonOutline";
 import { useDimensions } from "../../common/hooks/useDimensions";
@@ -85,7 +79,7 @@ const Header = ({
         )}
       </AnimatePresence>
       <motion.div
-        className=" absolute bottom-0 left-0 right-0 h-[3px] origin-[0%] dark:bg-primary bg-primaryDark"
+        className="hidden lg:block absolute bottom-0 left-0 right-0 h-[3px] origin-[0%] dark:bg-primary bg-primaryDark"
         style={{ scaleX }}
       />
     </div>
