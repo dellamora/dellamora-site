@@ -1,10 +1,11 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Backdrop from "./backdrop";
 import Image from "next/image";
 import { Projects } from "../../../domain/interfaces";
 import CloseIcon from "../../../common/svgs/closeIcon";
 import { motion } from "framer-motion";
+import ButtonOutline from "../../../common/components/buttonOutline";
 
 type Props = {
   isOpen: boolean;
@@ -15,15 +16,16 @@ type Props = {
   >;
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function ModalProject({ isOpen, onClose, project }: Props) {
   const [mount, setMount] = useState(false);
-
   useEffect(() => {
     setMount(true);
   }, []);
   if (!mount) {
     return <></>;
   }
+
   return createPortal(
     <>
       {isOpen && project && (
@@ -48,7 +50,7 @@ export default function ModalProject({ isOpen, onClose, project }: Props) {
                   }}
                 />
               </div>
-              <div className="flex flex-col gap-5 p-4 overflow-y-auto grow pb-20">
+              <div className="flex flex-col gap-5 p-4 overflow-y-auto grow pb-24">
                 <h1 className="font-bold text-2xl md:text-title text-gray dark:text-whiteTextDarkMode  text-bold ">
                   {project.name}
                 </h1>
@@ -71,14 +73,15 @@ export default function ModalProject({ isOpen, onClose, project }: Props) {
                   })}
                 </div>
               </div>
-              <a
-                href={project.link}
-                className="absolute w-full bottom-0 bg-gradient-to-t from-primary via-primary to-[rgba(0,0,0,0)] pt-8 dark:from-secondaryDark dark:via-secondaryDark "
-              >
-                <h3 className=" w-fit px-2 py-1 font-thin rounded-sm text-redLight dark:text-redLight ">
+              <div className="flex justify-center absolute w-full pb-4 bottom-0 bg-gradient-to-t from-primary via-primary to-[rgba(0,0,0,0)] pt-14 dark:from-secondaryDark dark:via-secondaryDark ">
+                <ButtonOutline
+                  className=" w-fit px-2 py-1 font-bold rounded-sm text-redLight dark:text-redLight "
+                  isLink={true}
+                  href={project.link}
+                >
                   View Project
-                </h3>
-              </a>
+                </ButtonOutline>
+              </div>
             </div>
           </motion.div>
           <Backdrop
