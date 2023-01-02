@@ -10,7 +10,9 @@ const Contact = (): JSX.Element => {
   const { isDark, toggleDarkMode } = useContext(DarkModeContext);
   const [inView, setInView] = useState(false);
   return (
-    <Section className="body-font relative" id={"contact"}
+    <Section
+      className="body-font relative"
+      id={"contact"}
       setIsInView={state => {
         setInView(state);
       }}
@@ -30,10 +32,13 @@ const Contact = (): JSX.Element => {
         ></iframe>
       </div>
       <div className="container px-5 py-24 mx-auto flex">
-      <motion.div 
-          initial={{opacity: 0}}
-          animate={inView ?  {opacity: 1, transition:{delay: 1.2}} : {opacity: 0}} 
-          className="gap-3 items-center bg-primaryLight dark:bg-secondaryDark lg:w-1/3 md:w-1/2 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={
+            inView ? { opacity: 1, transition: { delay: 1.2 } } : { opacity: 0 }
+          }
+          className="gap-3 items-center bg-primaryLight dark:bg-secondaryDark lg:w-1/3 md:w-1/2 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md"
+        >
           <div className="flex flex-row font-Inter font-bold text-4xl gap-3">
             <h1>
               Let&apos;s create something{" "}
@@ -43,9 +48,8 @@ const Contact = (): JSX.Element => {
             </h1>
           </div>
           <p className="font-Inter text-grayMedium ">
-            I’m interested in freelance opportunities – especially ambitious or
-            large projects. However, if you have other request or question,
-            don’t hesitate to send me a mail.
+            I&apos;m availiable for freelance work – especially ambitious and
+            creative projects. Feel free to send any request (:
           </p>
           <ButtonOutline
             href="mailto:francielle@dellamora.dev"
