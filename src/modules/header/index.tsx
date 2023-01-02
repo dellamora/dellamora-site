@@ -1,4 +1,10 @@
-import { AnimatePresence, motion, MotionValue, useScroll, useSpring } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  MotionValue,
+  useScroll,
+  useSpring,
+} from "framer-motion";
 import React, { useRef, useState } from "react";
 import ButtonOutline from "../../common/components/buttonOutline";
 import { useDimensions } from "../../common/hooks/useDimensions";
@@ -6,8 +12,10 @@ import MenuToggleIcon from "../../common/svgs/withAnimation/menuToggle";
 import DarkModeToggle from "./components/darkModeToggle";
 import Drawer from "./components/drawer";
 
-const Header = ({scrollProgress}: {
-  scrollProgress: MotionValue<number>
+const Header = ({
+  scrollProgress,
+}: {
+  scrollProgress: MotionValue<number>;
 }): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
@@ -60,7 +68,7 @@ const Header = ({scrollProgress}: {
           <DarkModeToggle />
           <ButtonOutline
             isLink
-            href="https://www.linkedin.comoin/francielle-dellamora-3579301a1/"
+            href="https://www.linkedin.com/in/francielle-dellamora-3579301a1/"
             className="text-grayMedium dark:text-grayLight text-sm rounded-lg border-grayLight transition-colors hover:bg-grayLight/20 dark:hover:bg-secondaryDark/50"
           >
             LinkedIn
