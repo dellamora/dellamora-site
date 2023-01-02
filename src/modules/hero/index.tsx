@@ -29,16 +29,17 @@ const Hero: React.FC = (): JSX.Element => {
               title="Francielle Dellamora"
               triggerAnimation={inView}
             />
-            <motion.p 
+            <motion.p
               className=" max-w-[33rem] text-justify mt-10"
-              initial={{opacity: 0, }}
-              animate={{opacity: 1, }}
-              transition={{delay: 2}}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2 }}
             >
-
-              Creative front-end developer with more than +2 years of Experience
-              in enterprise companies and startups. Proficient in Html, Tailwind
-              Css, Javascript and React. Passionate about UI/UX
+              Hi, I’m a fullstack developer passionate about creating protects
+              for web development and technologies that makes a positive impact
+              on people&apos;s lives. Always looking for new challenges and
+              opportunities to learn and grow. Proficient in JavaScript, React,
+              and Tailwind CSS.
             </motion.p>
             <div className="flex justify-center lg:justify-start space-x-8 items-center py-10">
               <GitHub className="stroke-redLight" width="20px" />
