@@ -12,30 +12,30 @@ type Props = {
 
 const TechItem = ({ experience, current, inView }: Props): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-   useEffect(() => {
-     setIsOpen(false);
-   }, [current]);
+  useEffect(() => {
+    setIsOpen(false);
+  }, [current]);
 
   return (
-    <motion.div 
+    <motion.div
       initial="hidden"
       animate={inView ? "view" : "hidden"}
-      className="text-placeholder flex flex-wrap ">
+      className="text-placeholder flex flex-wrap "
+    >
       {experience.technologies
         .slice(0, isOpen ? experience.technologies.length : 3)
         .map((technology, index) => (
           <motion.div
             key={technology.name + "-" + current}
             variants={{
-             hidden: {opacity: 0}, 
-             view: { 
-              opacity: 1
-            }
-          }}
-          transition={{
+              hidden: { opacity: 0 },
+              view: {
+                opacity: 1,
+              },
+            }}
+            transition={{
               x: { stiffness: 1000 },
-              delay:
-               Math.max(index - 3, isOpen ? 0 : index) * 0.2,
+              delay: Math.max(index - 3, isOpen ? 0 : index) * 0.2,
             }}
             whileHover={{ scale: 1.1 }}
             className="
@@ -50,14 +50,14 @@ const TechItem = ({ experience, current, inView }: Props): JSX.Element => {
         ))}
       {!isOpen && (
         <motion.button
-        key={"learnmore-" + current}
-        initial={{opacity: 0}}
+          key={"learnmore-" + current}
+          initial={{ opacity: 0 }}
           animate={
             inView
               ? {
                   opacity: 1,
                   transition: {
-                    delay: 0.8 ,
+                    delay: 0.8,
                   },
                 }
               : { opacity: 0 }
