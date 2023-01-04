@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-
 const Backdrop: React.FC<{ onClose: () => void }> = ({
   onClose,
 }): JSX.Element => {
@@ -12,7 +11,9 @@ const Backdrop: React.FC<{ onClose: () => void }> = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      onClick={() => {onClose()}}
+      onClick={() => {
+        onClose();
+      }}
       className="z-40 fixed w-screen h-screen  bg-secondaryDark/70 "
     />
   );
