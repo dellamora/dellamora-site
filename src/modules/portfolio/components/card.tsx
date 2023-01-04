@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import useWindowDimensions from "../../../common/hooks/useWindowDimensions";
 import { Projects } from "../../../domain/interfaces";
 type Props = {
-  project: Pick<Projects, "name">;
+  project: Pick<Projects, "name" | "img">;
   inView: boolean;
   onClick: () => void;
 };
@@ -51,10 +51,10 @@ const CardProject = ({ project, onClick, inView }: Props): JSX.Element => {
         </motion.div>
       )}
       <Image
-        className="absolute object-cover aspect-video"
+        className="absolute object-cover aspect-video object-left"
         alt="movie poster"
         fill
-        src="https://criticalhits.com.br/wp-content/uploads/2020/09/anbu-minato-768x432.jpg"
+        src={project.img}
       />
     </motion.div>
   );

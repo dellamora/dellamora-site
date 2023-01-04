@@ -12,7 +12,7 @@ const projects = [
     description: [
       "Just another Netflix clone and is a work in process that you can follow through a thread on twitter in which I will be sharing the progress.",
     ],
-    img: "url(kkkkk)",
+    img: "/portfolio/dellaflix.png",
     link: "https://v2.tailwindcss.com/docs/backdrop-filter",
     technologies: [
       "React",

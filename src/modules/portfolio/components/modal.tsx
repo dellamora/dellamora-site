@@ -12,7 +12,7 @@ type Props = {
   onClose: () => void;
   project?: Pick<
     Projects,
-    "name" | "description" | "link" | "technologies" | "data"
+    "name" | "description" | "link" | "technologies" | "data" | "img"
   >;
 };
 
@@ -38,10 +38,10 @@ export default function ModalProject({ isOpen, onClose, project }: Props) {
             <div className="relative flex flex-col pointer-events-auto bg-white rounded-lg w-full lg:max-w-xl lg:max-h-[90vh]  h-auto max-h-screen  md:w-3/5 overflow-y-hidden bg-primaryLight dark:bg-secondaryDark ">
               <div className="relative aspect-video shrink-0">
                 <Image
-                  className="object-cover "
+                  className="object-cover aspect-video object-left"
                   alt="project image"
                   fill
-                  src="https://criticalhits.com.br/wp-content/uploads/2020/09/anbu-minato-768x432.jpg"
+                  src={project.img}
                 />
                 <CloseIcon
                   className="block md:hidden absolute top-0 right-0 "

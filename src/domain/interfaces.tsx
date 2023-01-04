@@ -65,4 +65,5 @@ export interface Projects {
   technologies?: string[];
   description?: string[];
   link?: string;
+  img?: string;
 }
