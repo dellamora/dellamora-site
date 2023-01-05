@@ -14,7 +14,7 @@ const AboutMe: React.FC = (): JSX.Element => {
     { name: "TypeScript", value: 66 },
     { name: "Firebase", value: 64 },
     { name: "Express.js", value: 62 },
-    { name: "Prisma/SQL/NoSQl", value: 60 },
+    { name: "Prisma/SQL/NoSQL", value: 60 },
   ];
   return (
     <Section
