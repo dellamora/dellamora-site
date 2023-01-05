@@ -7,7 +7,7 @@ import Footer from "../modules/footer";
 import Hero from "../modules/hero";
 import Portfolio from "../modules/portfolio";
 
-export default function Home() {
+const Home: React.FC = (): JSX.Element => {
   return (
     <div className="">
       <Head>
@@ -22,4 +22,6 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Home;

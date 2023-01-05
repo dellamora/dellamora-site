@@ -37,8 +37,7 @@ const Articles = (): JSX.Element => {
         subTitle="My articles"
         triggerAnimation={inView}
       />
-      <div 
-      className="flex items-center">
+      <div className="flex items-center">
         <Swiper
           breakpoints={{
             640: {

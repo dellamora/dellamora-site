@@ -10,18 +10,20 @@ type Props = {
   experiences: Pick<InfoJob, "company">;
   onClick: () => void;
   active: boolean;
-  inView: boolean
+  inView: boolean;
 };
 const CompanyButton = ({
   experiences,
   onClick,
   active,
-  inView
+  inView,
 }: Props): JSX.Element => {
   return (
-    <motion.div 
+    <motion.div
       className="relative w-full"
-      animate={inView ?  {opacity: 1,transition:{delay: 1}} : {opacity: 0}} 
+      animate={
+        inView ? { opacity: 1, transition: { delay: 1 } } : { opacity: 0 }
+      }
     >
       <button
         className={`w-full flex relative font-Inter items-center text-xl text-left py-2 md:px-6 px-4 z-20 

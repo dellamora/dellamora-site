@@ -28,5 +28,5 @@ export default function useWindowDimensions(): {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return {...windowDimensions, isMobile: windowDimensions.width < 768};
+  return { ...windowDimensions, isMobile: windowDimensions.width < 768 };
 }

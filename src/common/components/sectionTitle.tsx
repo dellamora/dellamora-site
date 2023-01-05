@@ -24,8 +24,8 @@ const SectionTitle = ({
     hidden: {
       opacity: 0,
       y: `0.25em`,
-      rotate: "12deg", 
-      x: -100
+      rotate: "12deg",
+      x: -100,
     },
     visible: {
       opacity: 1,
@@ -35,7 +35,6 @@ const SectionTitle = ({
       transition: {
         duration: 1,
         ease: [0.2, 0.65, 0.3, 0.9],
-
       },
     },
   };
@@ -76,7 +75,6 @@ const SectionTitle = ({
                 {word.split("").map((character, index) => {
                   return (
                     <motion.span
-                    
                       aria-hidden="true"
                       key={`key-${character}-${index}`}
                       variants={characterAnimation}

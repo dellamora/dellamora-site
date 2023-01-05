@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 
 interface DarkModeContextInterface {
-  isDark: boolean ;
+  isDark: boolean;
   toggleDarkMode: () => void;
 }
 
