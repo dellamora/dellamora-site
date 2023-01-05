@@ -27,7 +27,7 @@ const Articles = (): JSX.Element => {
   return (
     <Section
       id="articles"
-      className="flex flex-col gap-10 justify-center md:items-center bg-primary dark:bg-primaryDark"
+      className="flex flex-col gap-10  bg-primary dark:bg-primaryDark"
       setIsInView={isInView => {
         setInview(current => isInView || current);
       }}
@@ -37,7 +37,7 @@ const Articles = (): JSX.Element => {
         subTitle="My articles"
         triggerAnimation={inView}
       />
-      <div className="flex items-center">
+      <div>
         <Swiper
           breakpoints={{
             640: {
