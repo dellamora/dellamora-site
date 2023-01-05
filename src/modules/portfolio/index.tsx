@@ -21,7 +21,7 @@ const projects = [
       "NextJS",
       "TailWindCSS",
       "Express.js",
-      "Prisma/SQL/NoSQl",
+      "Prisma/SQL/NoSQL",
     ],
     data: "20/20/2002",
   },
