@@ -35,7 +35,7 @@ const Hero: React.FC = (): JSX.Element => {
               animate={{ opacity: 1 }}
               transition={{ delay: 2 }}
             >
-              Hi, I’m a fullstack developer passionate about creating protects
+              Hi, I’m a fullstack developer passionate about creating projects
               for web development and technologies that makes a positive impact
               on people&apos;s lives. Always looking for new challenges and
               opportunities to learn and grow. Proficient in JavaScript, React,
