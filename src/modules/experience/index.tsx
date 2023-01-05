@@ -30,7 +30,7 @@ const experiences = [
     description: [
       "Have worked on the development of landing pages, a web crawler and two PWA applications.",
       "Had the experience of being responsible for managing the daily meeting, sprint, and tasks.",
-      "Did analysis on the structure and features of the project so we could refactor and improve the Ux and DevX .",
+      "Did analysis on the structure and features of the project so we could refactor and improve the Ux and DevX.",
       "Have done project documentations.",
       "Collaborated with back-end developers and web designers to improve usability.",
       "Have organized events such as programming logic competitions, coding dojo, and the like to bring the team together.",
@@ -71,8 +71,8 @@ const Experience = (): JSX.Element => {
         setInView(state);
       }}
     >
-      <div className="flex gap-8 md:gap-16 flex-col md:flex-row  ">
-        <div className="flex md:gap-12 flex-col justify-start md:px-10">
+      <div className="flex gap-8 md:gap-16 lg:gap-40 flex-col md:flex-row  ">
+        <div className="flex md:gap-12 flex-col  ">
           <SectionTitle
             title="Work Experience"
             subTitle="career path"
@@ -95,7 +95,7 @@ const Experience = (): JSX.Element => {
             })}
           </motion.div>
         </div>
-        <div className="md:w-3/5">
+        <div className="md:w-full">
           <InfoJob
             current={currentExperience}
             experience={experiences[currentExperience]}
