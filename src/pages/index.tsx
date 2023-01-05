@@ -14,10 +14,10 @@ const Home: React.FC = (): JSX.Element => {
         <title>Francielle Dellamora</title>
       </Head>
       <Hero />
-      <Portfolio />
-      <Articles />
-      <Experience />
       <AboutMe />
+      <Portfolio />
+      <Experience />
+      <Articles />
       <Contact />
       <Footer />
     </div>

@@ -16,10 +16,10 @@ const Header = ({
   const { height } = useDimensions(containerRef);
 
   const links = [
-    { name: "Portfolio", to: "#portfolio", id: 1 },
-    { name: "Articles", to: "#articles", id: 2 },
+    { name: "About me", to: "#aboutme", id: 1 },
+    { name: "Portfolio", to: "#portfolio", id: 2 },
     { name: "Experience", to: "#experience", id: 3 },
-    { name: "About me", to: "#aboutme", id: 4 },
+    { name: "Articles", to: "#articles", id: 4 },
     { name: "Contact", to: "#contact", id: 5 },
   ];
 
