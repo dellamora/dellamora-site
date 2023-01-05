@@ -16,8 +16,7 @@ type Props = {
   >;
 };
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export default function ModalProject({ isOpen, onClose, project }: Props) {
+const ModalProject = ({ isOpen, onClose, project }: Props): JSX.Element => {
   const [mount, setMount] = useState(false);
   useEffect(() => {
     setMount(true);
@@ -101,4 +100,6 @@ export default function ModalProject({ isOpen, onClose, project }: Props) {
     </>,
     document.getElementById("modal-root"),
   );
-}
+};
+
+export default ModalProject;
