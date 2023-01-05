@@ -50,14 +50,21 @@ export default function ModalProject({ isOpen, onClose, project }: Props) {
                   }}
                 />
               </div>
-              <div className="flex flex-col gap-5 p-4 overflow-y-auto grow pb-24">
-                <h1 className="font-bold text-2xl md:text-title text-gray dark:text-whiteTextDarkMode  text-bold ">
+              <div className="flex flex-col  p-4 overflow-y-auto grow pb-24">
+                <h1 className="font-bold text-2xl md:text-title text-gray dark:text-whiteTextDarkMode text-bold mb-5">
                   {project.name}
                 </h1>
-                <span className="font-Inter font-medium mb-3 text-justify dark:text-grayLight">
-                  {project.description}
-                </span>
-                <div className="flex flex-row  flex-wrap ">
+                {project.description.map((p, i) => {
+                  return (
+                    <span
+                      key={`paragraph-${i}`}
+                      className="font-Inter font-medium text-justify dark:text-grayLight"
+                    >
+                      {p}
+                    </span>
+                  );
+                })}
+                <div className="flex flex-row  flex-wrap mt-5">
                   <h3 className="pr-2 text-base">Stack:</h3>
                   {project.technologies.map((technology, i) => {
                     return (
