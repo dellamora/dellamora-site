@@ -34,7 +34,10 @@ export const Section = ({
       className={`min-h-[50vh] relative overflow-hidden lg:p-[65px] p-5  ${className}`}
       ref={ref}
     >
-      <div id={id} className="absolute pointer-events-none -top-[10px]" />
+      <div
+        id={id}
+        className="absolute pointer-events-none -top-[50px] lg:-top-[12px]"
+      />
       <SectionTitle
         triggerAnimation={inView}
         title={title}
