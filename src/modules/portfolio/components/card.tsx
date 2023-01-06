@@ -40,7 +40,7 @@ const CardProject = ({ project, onClick, inView }: Props): JSX.Element => {
           animate={{ opacity: isMobile ? 1 : 0 }}
           whileHover={{ opacity: 1 }}
         >
-          <div className="bg-primaryLight/50 dark:bg-secondaryDark/50 w-full h-full p-3 z-20 flex justify-center items-center flex-col">
+          <div className="cursor-pointer bg-primaryLight/50 dark:bg-secondaryDark/50 w-full h-full p-3 z-20 flex justify-center items-center flex-col">
             <h1 className="font-bold text-secondaryDark dark:text-primary">
               {project.name}
             </h1>
