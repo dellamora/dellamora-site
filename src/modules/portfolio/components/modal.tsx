@@ -82,7 +82,7 @@ const ModalProject = ({ isOpen, onClose, project }: Props): JSX.Element => {
               <div className="flex justify-center absolute w-full pb-4 bottom-0 bg-gradient-to-t from-primary via-primary to-[rgba(0,0,0,0)] pt-14 dark:from-secondaryDark dark:via-secondaryDark ">
                 <ButtonOutline
                   className=" w-fit px-2 py-1 font-bold rounded-sm text-redLight dark:text-redLight "
-                  isLink={true}
+                  isLink={false}
                   href={project.link}
                 >
                   View Project

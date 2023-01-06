@@ -43,8 +43,10 @@ const ArticleCard = ({ article, inView }: Props): JSX.Element => {
           {article.description}
         </span>
         <a
+          target="_blank"
           href={article.url}
           className="text-grayMedium dark:text-grayLight hover:underline font-medium  text-sm px-3 py-2 text-center flex justify-center"
+          rel="noreferrer"
         >
           Continue Reading
         </a>

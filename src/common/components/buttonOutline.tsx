@@ -31,7 +31,9 @@ const ButtonOutline = ({
       {isLink ? (
         <Link {...buttonProps}>{children}</Link>
       ) : (
-        <a {...buttonProps}>{children}</a>
+        <a target="_blank" {...buttonProps}>
+          {children}
+        </a>
       )}
     </>
   );

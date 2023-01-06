@@ -61,7 +61,7 @@ const Header = ({
         <div className=" hidden lg:flex lg:space-x-10 lg:items-center  ">
           <DarkModeToggle />
           <ButtonOutline
-            isLink
+            isLink={false}
             href="https://www.linkedin.com/in/francielle-dellamora-3579301a1/"
             className="text-grayMedium dark:text-grayLight text-sm rounded-lg border-grayLight transition-colors hover:bg-grayLight/20 dark:hover:bg-secondaryDark/50"
           >
