@@ -39,7 +39,6 @@ const Footer: React.FC = (): JSX.Element => {
 
         <li>
           <a
-            target="_blank"
             href="mailto:francielle@dellamora.dev"
             className="hover:underline"
             rel="noreferrer"
