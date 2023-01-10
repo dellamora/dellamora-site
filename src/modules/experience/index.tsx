@@ -31,7 +31,7 @@ const experiences = [
       "Have worked on the development of landing pages, a web crawler and two PWA applications.",
       "Had the experience of being responsible for managing the daily meeting, sprint, and tasks.",
       "Did analysis on the structure and features of the project so we could refactor and improve the Ux and DevX.",
-      "Have done project documentations.",
+      "Have done projects documentations.",
       "Collaborated with back-end developers and web designers to improve usability.",
       "Have organized events such as programming logic competitions, coding dojo, and the like to bring the team together.",
     ],
