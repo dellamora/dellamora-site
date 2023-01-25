@@ -25,7 +25,7 @@ const Path = props => (
 );
 const BuyMeACoffeee: Icon = ({ width, className }): JSX.Element => {
   return (
-    <Link href="https://www.buymeacoffee.com/dellamora">
+    <Link href="https://www.buymeacoffee.com/dellamora" target="_blank">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         className={className}

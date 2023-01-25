@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Twitter: Icon = ({ width, className }): JSX.Element => {
   return (
-    <Link href="https://twitter.com/francidellamora">
+    <Link href="https://twitter.com/francidellamora" target="_blank">
       <motion.svg
         width={width}
         viewBox="0 0 41 33"

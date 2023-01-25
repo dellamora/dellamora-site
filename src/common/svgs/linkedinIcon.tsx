@@ -5,7 +5,10 @@ import React from "react";
 
 const LinkedIn: Icon = ({ fill, className, width }): JSX.Element => {
   return (
-    <Link href="https://www.linkedin.com/in/francielle-dellamora-3579301a1/">
+    <Link
+      href="https://www.linkedin.com/in/francielle-dellamora-3579301a1/"
+      target="_blank"
+    >
       <motion.svg
         width={width}
         viewBox="0 0 22 22"

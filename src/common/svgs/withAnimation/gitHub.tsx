@@ -7,7 +7,7 @@ import { Icon } from "../../../domain/components/icon";
 
 const GitHub: Icon = ({ width, className }): JSX.Element => {
   return (
-    <Link href="https://github.com/dellamora">
+    <Link href="https://github.com/dellamora" target="_blank">
       <motion.svg
         width={width}
         height="37"

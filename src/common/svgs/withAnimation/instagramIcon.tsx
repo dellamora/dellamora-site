@@ -8,7 +8,7 @@ import { Icon } from "../../../domain/components/icon";
 
 const Instagram: Icon = ({ width, className }): JSX.Element => {
   return (
-    <Link href="https://www.instagram.com/francidellamora/">
+    <Link href="https://www.instagram.com/francidellamora/" target="_blank">
       <motion.svg
         width={width}
         viewBox="0 0 32 32"
