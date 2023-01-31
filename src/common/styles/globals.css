@@ -36,12 +36,6 @@ src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;50
   --swiper-theme-color: #656D72;
 }
 
-p {
-  @apply font-Inter text-gray dark:text-grayLight text-lg
-}
-span {
-  @apply font-Inter text-gray dark:text-grayMedium 
-}
 h1 {
   @apply font-Inter font-bold text-gray text-2xl md:text-3xl dark:text-whiteTextDarkMode 
 }
@@ -54,4 +48,10 @@ h3 {
 }
 h4 {
   @apply font-Inter text-lg lg:text-xl font-semibold text-gray dark:text-grayLight
+}
+p {
+  @apply font-Inter text-gray dark:text-grayLight text-lg
+}
+span {
+  @apply font-Inter text-gray dark:text-grayMedium 
 }
