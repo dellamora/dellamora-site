@@ -33,7 +33,7 @@ const ArticleCard = ({ article, inView }: Props): JSX.Element => {
           src={article.cover_image}
         />
       </div>
-      <div className="p-5">
+      <div className="p-5 min-h-[300px]">
         <a href={article.url}>
           <h1 className="hover:underline tracking-tight mb-2 md:text-xl ">
             {article.title}
