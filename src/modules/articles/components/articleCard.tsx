@@ -23,7 +23,7 @@ const ArticleCard = ({ article, inView }: Props): JSX.Element => {
           transition: { delay: 1.4 },
         },
       }}
-      className="bg-white border  border-grayLight dark:border-none rounded-lg max-w-sm overflow-hidden  dark:bg-secondaryDark "
+      className="bg-white border  border-grayLight dark:border-secondaryDark rounded-lg max-w-sm overflow-hidden  dark:bg-secondaryDark "
     >
       <div className="relative aspect-video w-auto ">
         <Image
