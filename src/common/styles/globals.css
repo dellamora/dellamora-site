@@ -18,19 +18,19 @@ src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;50
   src:  url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
   }
   
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
   
-
-
+  
   div, nav, footer, section, button {
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms; 
   }
-
+  
+  
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
 
 .swiper {
   --swiper-theme-color: #656D72;
