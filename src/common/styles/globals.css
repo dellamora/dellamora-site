@@ -47,9 +47,9 @@ h3 {
 h4 {
   @apply font-Inter text-lg lg:text-xl font-semibold text-gray dark:text-grayLight
 }
-p {
-  @apply font-Inter text-gray dark:text-grayLight text-lg
-}
 span {
   @apply font-Inter text-gray dark:text-grayMedium 
+}
+p {
+  @apply font-Inter text-gray dark:text-grayLight text-lg
 }
