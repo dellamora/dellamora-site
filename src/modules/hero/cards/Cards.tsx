@@ -9,14 +9,14 @@ const Cards: React.FC = (): JSX.Element => {
         transition={{ duration: 2, delay: 0.75 }}
         className="
         bg-redLight
-          lg:w-[21rem] 
+          lg:w-[19rem] 
           lg:rounded-[16px] 
-          lg:h-[25rem] 
+          lg:h-[28rem] 
           "
       />
       <img
         src="/mePc.jpg"
-        className="hidden lg:block lg:absolute rounded-[16px] w-[21rem] h-[25rem]"
+        className="hidden lg:block lg:absolute rounded-[16px] w-[19rem] h-[28rem]"
       />
     </div>
   );

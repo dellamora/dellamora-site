@@ -17,8 +17,8 @@ module.exports = {
       primary: "#FFFFFF",
       primaryLight: "#FBFBFB",
       primaryDark: "#1E1E1E",
-      redLight: "#F83941",
-      redDark: "#D91A23",
+      redLight: "#9C96FD",
+      redDark: "#9C96FD",
       gray: "#232E35",
       grayMedium: "#656D72",
       grayLight: "#D9D9D9", //span e textos
