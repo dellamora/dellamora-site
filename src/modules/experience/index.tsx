@@ -9,6 +9,31 @@ import InfoJob from "./components/infoJob";
 
 const experiences = [
   {
+    company: "RCX ",
+    address: "Porto Alegre, Rio Grande do Sul",
+    role: "Front-end Developer",
+    period: { start: "Mar 2023", end: "Present" },
+    modality: "Hybrid",
+    technologies: [
+      { name: "JavaScript" },
+      { name: "TypeScript" },
+      { name: "Jquery" },
+      { name: "React" },
+      { name: "Next.js" },
+      { name: "Tailwind CSS" },
+      { name: "Styled-Components" },
+      { name: "HTML" },
+      { name: "zod" },
+    ],
+    description: [
+      "Led development of the company's website.",
+      "Contributed to bug solving and new features development.",
+      "Proficiently implemented internationalization (i18n).",
+      "Did analysis on the structure and features of the project so we could refactor and improve the Ux and DevX.",
+      "Collaborated with back-end developers to improve usability.",
+    ],
+  },
+  {
     company: "Venturus",
     address: "Campinas, São Paulo",
     role: "Front-end Developer",
@@ -32,33 +57,35 @@ const experiences = [
       "Had the experience of being responsible for managing the daily meeting, sprint, and tasks.",
       "Did analysis on the structure and features of the project so we could refactor and improve the Ux and DevX.",
       "Have done projects documentations.",
+      "Monitored and analyzed aplications metrics, making data-driven recommendations for continuous improvement.",
       "Collaborated with back-end developers and web designers to improve usability.",
       "Have organized events such as programming logic competitions, coding dojo, and the like to bring the team together.",
     ],
   },
-  // {
-  //   company: "Dellamora",
-  //   address: "Porto Alegre",
-  //   role: "Founder",
-  //   period: { start: "Fev 2022", end: "Present" },
-  //   modality: " Home office",
-  //   technologies: [
-  //     { name: "JavaScript" },
-  //     { name: "TypeScript" },
-  //     { name: "NextJS" },
-  //     { name: "React" },
-  //     { name: "Express" },
-  //     { name: "MongoDB" },
-  //     { name: "Prisma" },
-  //     { name: "Styled-Components" },
-  //     { name: "TailWindCSS" },
-  //     { name: "Figma" },
-  //   ],
-  //   description: [
-  //     "This is my research, development and freelance work place.",
-  //     "I discover, study new technologies and apply them in personal projects before using them in professional projects.",
-  //   ],
-  // },
+
+  {
+    company: "Dellamora",
+    address: "Porto Alegre",
+    role: "Founder",
+    period: { start: "Fev 2022", end: "Present" },
+    modality: " Home office",
+    technologies: [
+      { name: "JavaScript" },
+      { name: "TypeScript" },
+      { name: "NextJS" },
+      { name: "React" },
+      { name: "Express" },
+      { name: "MongoDB" },
+      { name: "Prisma" },
+      { name: "Styled-Components" },
+      { name: "TailWind CSS" },
+      { name: "Figma" },
+    ],
+    description: [
+      "This is my research, development and freelance work place.",
+      "I discover, study new technologies and apply them in personal projects before using them in professional projects.",
+    ],
+  },
 ];
 const Experience = (): JSX.Element => {
   const [inView, setInView] = useState(false);
