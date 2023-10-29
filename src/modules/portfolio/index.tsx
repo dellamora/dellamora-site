@@ -25,6 +25,26 @@ const projects = [
     ],
     data: "20/20/2002",
   },
+  {
+    name: "Lockdesk",
+    id: 2,
+    description: [
+      "Lockdesk is user-friendly software created by Venturus to streamline the workstation booking process in shared spaces. It aims to efficiently organize workspaces while prioritizing flexibility and inclusivity. The software provides a simple, visually appealing interface for booking and managing workstations.",
+      "My role in this project was pivotal, as I spearheaded  a major overhaul/refactor in the code of Lockdesk, such as creating a base design system with shared components, making the integration with Firebase, working with the design team to make the best UI/UX possible, and writing the documentation.",
+    ],
+    img: "/portfolio/lockdesk.jpg",
+    link: "https://www.venturus.org.br/blog/lockdesk-o-software-para-a-volta-ao-escritorio/",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Firebase",
+      "Styled-Components",
+      "Konva.React",
+      "MUI",
+      "Figma",
+    ],
+    data: "20/20/2002",
+  },
 ];
 
 const Portfolio: React.FC = (): JSX.Element => {
