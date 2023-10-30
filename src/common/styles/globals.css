@@ -1,6 +1,6 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
 @font-face {
   font-family: "Frank Ruhl Libre";
   src: url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap');
@@ -53,3 +53,5 @@ span {
 p {
   @apply font-Inter text-gray dark:text-grayLight text-lg
 }
+
+
